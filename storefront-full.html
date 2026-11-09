@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picklearo | Handcrafted Artisanal Pickles & Relishes</title>
+  <meta name="description" content="Authentic, slow-cured, sun-drenched Indian pickles handcrafted with heirloom recipes, pure cold-pressed oils, and no artificial preservatives.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Special Offers">
+    <div class="container bar-content">
+      <span>🎉 <strong>FREE SHIPPING</strong> on all orders above ₹499!</span>
+      <span class="bar-separator">•</span>
+      <span>Use code <mark class="coupon-tag">PICKLE10</mark> for extra 10% OFF</span>
+      <span class="bar-separator">•</span>
+      <span>☀️ Fresh Batch Sun-Cured Just Last Week</span>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="Picklearo Home">
+        <span class="logo-icon">🥒</span>
+        <div class="brand-text">
+          <span class="brand-name">Picklearo</span>
+          <span class="brand-tagline">Artisanal & Handcrafted</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#shop" class="nav-link active">Shop All</a>
+        <a href="#heritage" class="nav-link">Our Heritage</a>
+        <a href="#spice-meter" class="nav-link">Spice Meter</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search mango, garlic, lime..." aria-label="Search pickles">
+          <button class="search-btn" id="searchBtn" aria-label="Submit search">🔍</button>
+        </div>
+
+        <button class="cart-trigger-btn" id="cartTriggerBtn" aria-label="View shopping cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count-badge" id="cartBadge">0</span>
+          <span class="cart-label-amount" id="cartHeaderTotal">₹0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge hero-badge">☀️ 100% Traditional Sun-Cured</span>
+        <h1 class="hero-title">Grandmother's Authentic Pickles, Handcrafted with Love & Sunshine</h1>
+        <p class="hero-subtitle">
+          Slowly aged in traditional ceramic Bharanis with pure cold-pressed gingelly & mustard oils, hand-pounded mountain spices, and zero chemical preservatives. Taste the nostagia of real Indian homes.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#shop" class="btn btn-primary btn-lg">Explore Bestsellers</a>
+          <a href="#heritage" class="btn btn-outline btn-lg">The 21-Day Sun Craft</a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <span class="highlight-num">100%</span>
+            <span class="highlight-desc">Preservative Free</span>
+          </div>
+          <div class="highlight-divider"></div>
+          <div class="highlight-item">
+            <span class="highlight-num">21 Days</span>
+            <span class="highlight-desc">Slow Sun Aging</span>
+          </div>
+          <div class="highlight-divider"></div>
+          <div class="highlight-item">
+            <span class="highlight-num">4.9 ★</span>
+            <span class="highlight-desc">12,000+ Happy Foodies</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card-showcase">
+        <div class="hero-jar-card">
+          <div class="jar-glow"></div>
+          <div class="jar-visual">
+            <span class="featured-jar-emoji">🏺</span>
+            <div class="jar-steam">✨</div>
+          </div>
+          <div class="hero-jar-info">
+            <div class="jar-badge">🔥 Most Loved Heirloom Batch</div>
+            <h3 class="jar-title">Avakaya Royal Mango Pickle</h3>
+            <p class="jar-desc">Tender raw Guntur mango chunks steeped in cold-pressed sesame oil, Guntur red chilies & roasted mustard powder.</p>
+            <div class="jar-meta">
+              <span class="jar-price">₹280 <del>₹350</del></span>
+              <button class="btn btn-sm btn-primary" onclick="quickAddToCart(1)">+ Quick Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Value Pillars -->
+  <section class="pillars-section">
+    <div class="container pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">🏺</div>
+        <h4>Clay Jar Matured</h4>
+        <p>Aged inside glazed ceramic Bharanis to preserve authentic micro-fermentation.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🌻</div>
+        <h4>Cold-Pressed Oils</h4>
+        <p>Pure wood-pressed mustard and gingelly oils without any refined blends.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🌿</div>
+        <h4>Zero Chemicals</h4>
+        <p>No synthetic sodium benzoate, vinegar, or artificial food colorings.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">👵</div>
+        <h4>Heirloom Recipes</h4>
+        <p>Passed down through 3 generations of grandmothers from southern & western India.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop & Catalog Section -->
+  <main class="shop-section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Direct From Our Kitchens</span>
+        <h2 class="section-title">Explore Our Handcrafted Collection</h2>
+        <p class="section-desc">Each batch is crafted in limited quantities according to seasonal harvest.</p>
+      </div>
+
+      <!-- Controls: Category Pills & Filters -->
+      <div class="catalog-controls">
+        <div class="category-tabs" id="categoryTabs">
+          <button class="cat-pill active" data-category="all">All Pickles (<span id="count-all">0</span>)</button>
+          <button class="cat-pill" data-category="mango">Traditional Mango (<span id="count-mango">0</span>)</button>
+          <button class="cat-pill" data-category="lemon">Tangy Citrus (<span id="count-lemon">0</span>)</button>
+          <button class="cat-pill" data-category="garlic">Garlic & Spices (<span id="count-garlic">0</span>)</button>
+          <button class="cat-pill" data-category="gourmet">Gourmet Veg (<span id="count-gourmet">0</span>)</button>
+          <button class="cat-pill" data-category="specialty">Signature Non-Veg (<span id="count-specialty">0</span>)</button>
+        </div>
+
+        <div class="filter-dropdowns">
+          <div class="filter-group">
+            <label for="spiceFilter">Heat Level:</label>
+            <select id="spiceFilter">
+              <option value="all">All Spice Levels</option>
+              <option value="mild">Mild (🌶️)</option>
+              <option value="medium">Medium (🌶️🌶️)</option>
+              <option value="spicy">Hot (🌶️🌶️🌶️)</option>
+              <option value="fiery">Extra Fiery (🌶️🌶️🌶️🌶️)</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortFilter">Sort By:</label>
+            <select id="sortFilter">
+              <option value="popular">Most Popular</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="name">Alphabetical (A-Z)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Filter Chips -->
+      <div class="active-filters-row" id="activeFiltersRow" style="display: none;">
+        <span>Active Filters:</span>
+        <div id="filterChips" class="filter-chips"></div>
+        <button id="clearFiltersBtn" class="clear-filters-btn">Clear All</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <span class="empty-icon">🔍</span>
+        <h3>No Pickles Found</h3>
+        <p>Try tweaking your search keywords or resetting your spice level filter.</p>
+        <button class="btn btn-outline" id="resetFiltersBtn">Reset All Filters</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Interactive Spice Meter Guide -->
+  <section class="spice-meter-section" id="spice-meter">
+    <div class="container">
+      <div class="spice-meter-card">
+        <div class="spice-meter-header">
+          <span class="section-tag light">Pick Your Heat</span>
+          <h2>The Picklearo Heat Scale</h2>
+          <p>We respect every palate—from gentle sweet-tangy notes to bold fiery chilies.</p>
+        </div>
+
+        <div class="spice-scale-grid">
+          <div class="scale-item" onclick="filterBySpice('mild')">
+            <div class="scale-peppers">🌶️</div>
+            <h4>Mild & Gentle</h4>
+            <p>Sweet Lime, Tender Date & Jaggery, Sun-dried Lemon. Perfect for kids and gentle palates.</p>
+            <span class="scale-link">View 2 Pickles &rarr;</span>
+          </div>
+
+          <div class="scale-item" onclick="filterBySpice('medium')">
+            <div class="scale-peppers">🌶️🌶️</div>
+            <h4>Classic Warmth</h4>
+            <p>Punjabi Mixed Veg, Stuffed Red Chili, Tomato Thokku. Well-balanced everyday table heat.</p>
+            <span class="scale-link">View 4 Pickles &rarr;</span>
+          </div>
+
+          <div class="scale-item" onclick="filterBySpice('spicy')">
+            <div class="scale-peppers">🌶️🌶️🌶️</div>
+            <h4>True Desi Kick</h4>
+            <p>Avakaya Mango, Roasted Garlic Poondu, Gongura leaf. Tangy, zesty, and boldly spirited.</p>
+            <span class="scale-link">View 5 Pickles &rarr;</span>
+          </div>
+
+          <div class="scale-item highlight" onclick="filterBySpice('fiery')">
+            <div class="scale-peppers">🌶️🌶️🌶️🌶️</div>
+            <h4>Bhoot Jolokia & Fire</h4>
+            <p>Guntur Fiery Prawn, Ghost Pepper Infusion. Not for the faint-hearted!</p>
+            <span class="scale-link">View 2 Pickles &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage Craft Story -->
+  <section class="heritage-section" id="heritage">
+    <div class="container heritage-grid">
+      <div class="heritage-text">
+        <span class="section-tag">The 21-Day Sun Craft</span>
+        <h2 class="section-title">Why Factory Pickles Can Never Match Traditional Sunshine Pickling</h2>
+        <p>Commercial pickles are made in stainless-steel vats with synthetic acetic acid (vinegar) in 48 hours. At Picklearo, we honor the ancient wisdom of slow-batch pickling.</p>
+
+        <div class="craft-steps">
+          <div class="craft-step">
+            <span class="step-num">01</span>
+            <div>
+              <h4>Hand-Selected Seasonal Produce</h4>
+              <p>Firm Ramkela & Totapuri mangoes, mountain garlic pods, and thick Guntur chilies picked at peak ripeness.</p>
+            </div>
+          </div>
+
+          <div class="craft-step">
+            <span class="step-num">02</span>
+            <div>
+              <h4>Freshly Stone-Ground Whole Spices</h4>
+              <p>Fenugreek, yellow mustard, turmeric, and sea salt roasted in iron pans and coarse-pounded.</p>
+            </div>
+          </div>
+
+          <div class="craft-step">
+            <span class="step-num">03</span>
+            <div>
+              <h4>21 Days of Direct Sun Curing</h4>
+              <p>Covered with muslin cloth and placed on traditional terrace sun-beds to mature naturally under radiant sunlight.</p>
+            </div>
+          </div>
+
+          <div class="craft-step">
+            <span class="step-num">04</span>
+            <div>
+              <h4>Cold-Pressed Oil Sealing</h4>
+              <p>Topped with virgin wood-pressed sesame or mustard oil to preserve crispness naturally for over 12 months.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="heritage-visual">
+        <div class="visual-card">
+          <div class="ceramic-pot-badge">🏺 Hand-Packed In Glass & Ceramic</div>
+          <blockquote class="grandma-quote">
+            "A pickle isn't ready when the clock says so; it is ready when the sunshine and mustard sing together."
+          </blockquote>
+          <span class="quote-author">— Dadi Kaushalya Devi, Master Recipe Custodian</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews & Testimonials -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Loved by 12,000+ Desi Food Lovers</span>
+        <h2 class="section-title">What Our Pickle Family Says</h2>
+        <div class="overall-rating-badge">
+          <span class="stars">★★★★★</span>
+          <strong>4.9 / 5.0</strong> based on 1,480+ verified reviews
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-top">
+            <div class="reviewer-info">
+              <strong class="reviewer-name">Ananya Sharma</strong>
+              <span class="reviewer-loc">Bengaluru • Verified Buyer</span>
+            </div>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-body">
+            "The Avakaya Mango literally took me back to my grandmother’s home in Rajahmundry. That pungent aroma of roasted mustard and authentic gingelly oil is unbeatable. Ordered 3 more jars for my cousins!"
+          </p>
+          <span class="review-product">Purchased: <strong>Andhra Avakaya Mango (500g)</strong></span>
+        </article>
+
+        <article class="review-card">
+          <div class="review-top">
+            <div class="reviewer-info">
+              <strong class="reviewer-name">Rohan Mehta</strong>
+              <span class="reviewer-loc">Mumbai • Verified Buyer</span>
+            </div>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-body">
+            "I was skeptical about ordering pickles online, but Picklearo blew me away. The packaging in glass jars with leak-proof seals arrived perfectly intact. The Garlic Pickle with hot parathas is our new morning addiction."
+          </p>
+          <span class="review-product">Purchased: <strong>Slow-Roasted Garlic Poondu (250g)</strong></span>
+        </article>
+
+        <article class="review-card">
+          <div class="review-top">
+            <div class="reviewer-info">
+              <strong class="reviewer-name">Kavitha Nair</strong>
+              <span class="reviewer-loc">Kochi • Verified Buyer</span>
+            </div>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <p class="review-body">
+            "Zero synthetic vinegar taste! You can immediately tell it was matured naturally under the sun. Crunchy, authentic, and bursting with real spices. Absolutely worth every single rupee."
+          </p>
+          <span class="review-product">Purchased: <strong>Sun-Dried Lemon & Ginger (500g)</strong></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container max-w-md">
+      <div class="section-header">
+        <span class="section-tag">Clear Answers</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">What is the shelf life of Picklearo pickles?</summary>
+          <div class="faq-answer">
+            Our pickles have a natural shelf life of <strong>12 months</strong> from the manufacturing date when stored in a cool, dry place. Because we rely on high quality cold-pressed oil and roasted spices as natural preservatives, ensure you always use a clean, dry spoon!
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Do you use any vinegar, chemical preservatives, or artificial colors?</summary>
+          <div class="faq-answer">
+            <strong>Never.</strong> We use zero sodium benzoate, zero glacial acetic acid (industrial vinegar), and zero artificial food colors. All tartness comes from raw green mangoes, lemons, tamarind, or natural fermentation.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How are the pickles packaged to prevent transit leaks?</summary>
+          <div class="faq-answer">
+            Every jar is packed in high-grade food-safe glass or ceramic jars sealed with induction foil and cushioned inside biodegradable honeycomb shockproof mailer boxes. We guarantee 100% leak-free delivery or an instant free replacement.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can I order via WhatsApp or customize wedding favors / bulk gifts?</summary>
+          <div class="faq-answer">
+            Yes! We offer customized miniature ceramic Bharanis and personalized branding for weddings, corporate gifting, and festivals. Click the WhatsApp button at the bottom to connect directly with our founder.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick WhatsApp Order Callout -->
+  <section class="whatsapp-banner">
+    <div class="container banner-inner">
+      <div class="wa-text">
+        <h3>Prefer Ordering Over WhatsApp?</h3>
+        <p>Send us your delivery address and favorite pickle names directly. We confirm in under 5 minutes!</p>
+      </div>
+      <a href="https://wa.me/919876543210?text=Hello%20Picklearo!%20I%20would%20like%20to%20order%20some%20fresh%20handcrafted%20pickles." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+        <span>💬 Chat on WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col brand-col">
+        <div class="brand-logo footer-logo">
+          <span class="logo-icon">🥒</span>
+          <span class="brand-name">Picklearo</span>
+        </div>
+        <p class="footer-desc">
+          Reviving India’s heirloom pickling heritage. Pure cold-pressed oils, sun-cured spices, and heartwarming homemade memories in every single jar.
+        </p>
+        <div class="certifications">
+          <span>🌿 100% Vegetarian Options</span>
+          <span>☀️ Sun Matured</span>
+          <span>🛡️ FSSAI Certified Kitchen</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#shop">Shop All Pickles</a></li>
+          <li><a href="#spice-meter">Spice Level Guide</a></li>
+          <li><a href="#heritage">Our Sun Craft</a></li>
+          <li><a href="#reviews">Verified Reviews</a></li>
+          <li><a href="#faq">Storage & FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Customer Care</h4>
+        <ul class="footer-links">
+          <li><a href="#faq">Track Order</a></li>
+          <li><a href="#faq">Shipping & Returns</a></li>
+          <li><a href="#faq">Bulk & Wedding Gifting</a></li>
+          <li><a href="#faq">Privacy Policy</a></li>
+          <li><a href="#faq">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-heading">Join The Pickle Club</h4>
+        <p>Get insider alerts on limited seasonal batches (like raw Tender Jackfruit and Sun-Dried Lotus Stem) + 10% off your first jar.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Picklearo Gourmet Foods Pvt. Ltd. All rights reserved.</p>
+      <p class="footer-credit">Handcrafted with tradition & ❤️ for pickle lovers everywhere.</p>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div class="drawer-title-row">
+        <h3>Your Cart (<span id="drawerCartCount">0</span>)</h3>
+        <button class="close-drawer-btn" id="closeCartBtn" aria-label="Close cart">&times;</button>
+      </div>
+
+      <!-- Free Shipping Tracker -->
+      <div class="shipping-bar-wrapper">
+        <div class="shipping-bar-text" id="shippingBarText">Add ₹500 for FREE Shipping</div>
+        <div class="shipping-progress">
+          <div class="shipping-progress-fill" id="shippingProgressFill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Items dynamically injected -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="coupon-section">
+        <div class="coupon-input-group">
+          <input type="text" id="couponInput" placeholder="Try PICKLE10" uppercase>
+          <button class="btn btn-sm btn-outline" id="applyCouponBtn">Apply</button>
+        </div>
+        <div class="coupon-feedback" id="couponFeedback"></div>
+      </div>
+
+      <div class="cart-totals">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div class="total-row discount-row" id="discountRow" style="display: none;">
+          <span>Discount (<span id="appliedDiscountName"></span>)</span>
+          <span id="cartDiscount">-₹0</span>
+        </div>
+        <div class="total-row">
+          <span>Shipping</span>
+          <span id="cartShipping">₹50</span>
+        </div>
+        <div class="total-row grand-total">
+          <strong>Estimated Total</strong>
+          <strong id="cartGrandTotal">₹0</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block btn-lg" id="checkoutBtn" onclick="openCheckoutModal()">
+        Proceed to Checkout &rarr;
+      </button>
+      <button class="btn btn-link btn-block" onclick="closeCartDrawer()">Continue Browsing</button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-backdrop" id="quickViewModal">
+    <div class="modal-card modal-lg">
+      <button class="modal-close" onclick="closeQuickView()">&times;</button>
+      <div class="quick-view-grid" id="quickViewContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-card modal-md">
+      <button class="modal-close" onclick="closeCheckoutModal()">&times;</button>
+      <div class="checkout-modal-content">
+        <h3 class="checkout-title">Complete Your Order</h3>
+        <p class="checkout-subtitle">Enter your delivery details to receive your freshly packed jar.</p>
+
+        <form id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderName">Full Name *</label>
+              <input type="text" id="orderName" required placeholder="e.g. Ramesh Kumar">
+            </div>
+            <div class="form-group">
+              <label for="orderPhone">Mobile Number *</label>
+              <input type="tel" id="orderPhone" required placeholder="10-digit mobile" pattern="[0-9]{10}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="orderAddress">Delivery Address *</label>
+            <input type="text" id="orderAddress" required placeholder="Flat/House No., Street, Landmark">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderCity">City *</label>
+              <input type="text" id="orderCity" required placeholder="e.g. Mumbai">
+            </div>
+            <div class="form-group">
+              <label for="orderPincode">Pincode *</label>
+              <input type="text" id="orderPincode" required placeholder="6-digit pincode" pattern="[0-9]{6}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Payment Method</label>
+            <div class="payment-options">
+              <label class="pay-option">
+                <input type="radio" name="paymentMethod" value="UPI" checked>
+                <span>⚡ UPI / QR Instant</span>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="paymentMethod" value="COD">
+                <span>💵 Cash on Delivery (COD)</span>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="paymentMethod" value="Card">
+                <span>💳 Credit / Debit Card</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="order-summary-box">
+            <div class="order-sum-line">
+              <span>Payable Amount:</span>
+              <strong id="checkoutFinalAmount">₹0</strong>
+            </div>
+            <small class="text-muted">Includes all taxes & delivery charges</small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitOrderBtn">
+            Confirm & Place Order 🥒
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Success Modal -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal-card modal-sm text-center">
+      <button class="modal-close" onclick="closeSuccessModal()">&times;</button>
+      <div class="success-icon-wrap">🎉</div>
+      <h3 class="success-title">Order Placed Successfully!</h3>
+      <p class="success-order-id">Order ID: <strong id="successOrderId">PKL-92841</strong></p>
+      <p class="success-message">
+        Thank you, <span id="successCustomerName">Friend</span>! Your authentic artisanal pickles are being packed in our traditional clay-lined jars and will ship in the next morning batch.
+      </p>
+      <div class="success-details-box" id="successDetailsBox"></div>
+      <button class="btn btn-primary btn-block" onclick="closeSuccessModal()">Back to Pickle Store</button>
+    </div>
+  </div>
+
+  <!-- Toast Notifications Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
