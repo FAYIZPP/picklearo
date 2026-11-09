@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picklearo Homemade Pickles | 100% Organic & FSSAI Certified</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -87,10 +88,10 @@
                 </div>
 
                 <!-- Sticky Navigation Bar Inside Screen -->
-                <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 px-4 py-3 flex items-center justify-between">
-                    <a href="#" class="flex items-center gap-2">
-                        <div class="w-9 h-9 rounded-full bg-pickle-800 flex items-center justify-center text-white text-base font-black shadow-sm border-2 border-pickle-600">
-                            🥒
+                <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 px-4 py-2.5 flex items-center justify-between">
+                    <a href="#" class="flex items-center gap-2.5">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-pickle-700 shadow-sm bg-[#2b583f] flex items-center justify-center shrink-0">
+                            <img src="logo.png" alt="Picklearo Logo" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <span class="text-base font-extrabold text-pickle-900 leading-none block">Picklearo</span>
@@ -99,6 +100,12 @@
                     </a>
 
                     <div class="flex items-center gap-2">
+                        <!-- Instagram Link Button -->
+                        <a href="https://www.instagram.com/picklearo?utm_source=ig_web_button_share_sheet&cplk=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 hover:opacity-90 text-white p-2 sm:px-2.5 sm:py-1.5 rounded-full font-semibold text-xs flex items-center gap-1.5 shadow-xs transition" title="Follow @picklearo on Instagram">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                            <span class="hidden sm:inline">Instagram</span>
+                        </a>
+
                         <!-- Cart Drawer Trigger Button -->
                         <button onclick="toggleCartDrawer()" class="relative p-2 text-pickle-800 hover:text-pickle-600 transition" title="View Order Bag">
                             <i class="fa-solid fa-bag-shopping text-lg"></i>
@@ -113,8 +120,13 @@
                 </header>
 
                 <!-- Hero Section Inside Screen -->
-                <section class="relative bg-gradient-to-b from-pickle-50 via-pickle-50/60 to-[#faf8f5] py-8 px-4 text-center">
-                    <div class="inline-flex items-center gap-1.5 bg-pickle-100 text-pickle-800 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-3 shadow-xs">
+                <section class="relative bg-gradient-to-b from-pickle-50 via-pickle-50/60 to-[#faf8f5] py-7 px-4 text-center">
+                    <!-- Picklearo Grandma Logo Emblem -->
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-full overflow-hidden border-4 border-[#2b583f] shadow-lg bg-[#2b583f] p-0.5">
+                        <img src="logo.png" alt="Picklearo Grandma Logo" class="w-full h-full object-cover rounded-full">
+                    </div>
+
+                    <div class="inline-flex items-center gap-1.5 bg-pickle-100 text-pickle-800 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2.5 shadow-xs">
                         <i class="fa-solid fa-award text-amberGold-600"></i> Since 2020 • 100% Homemade
                     </div>
                     
@@ -252,22 +264,25 @@
                 <!-- Footer Inside Screen -->
                 <footer class="bg-pickle-900 text-white p-6 text-center text-xs space-y-4">
                     <div class="max-w-md mx-auto">
-                        <div class="flex items-center justify-center gap-2 mb-2">
-                            <span class="text-2xl">🥒</span>
-                            <span class="font-extrabold text-base">Picklearo Homemade Pickles</span>
+                        <div class="w-16 h-16 mx-auto mb-2 rounded-full overflow-hidden border-2 border-pickle-700 bg-[#2b583f] shadow-md p-0.5">
+                            <img src="logo.png" alt="Picklearo Logo" class="w-full h-full object-cover rounded-full">
                         </div>
+                        <span class="font-extrabold text-base block mb-0.5">Picklearo Homemade Pickles</span>
                         <p class="text-gray-300 text-[11px] leading-relaxed">
                             Muttipalam, Manjeri, Malappuram District, Kerala — 676122.<br>
                             FSSAI Lic. Verified Kitchen • 100% Homemade Quality
                         </p>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-2 max-w-sm mx-auto">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Muttipalam+Manjeri+Malappuram+Kerala" target="_blank" rel="noopener noreferrer" class="bg-pickle-800 hover:bg-pickle-700 border border-pickle-700 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition">
-                            <i class="fa-solid fa-map-location-dot text-amberGold-500"></i> Google Maps Location
+                    <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto justify-center">
+                        <a href="https://www.instagram.com/picklearo?utm_source=ig_web_button_share_sheet&cplk=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:opacity-90 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition shadow-xs">
+                            <i class="fa-brands fa-instagram text-base"></i> Follow @picklearo
                         </a>
-                        <a href="https://wa.me/919074613342?text=Hi%20Picklearo,%20I%20have%20an%20inquiry." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Support
+                        <a href="https://wa.me/919074613342?text=Hi%20Picklearo,%20I%20have%20an%20inquiry." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition shadow-xs">
+                            <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Order
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Muttipalam+Manjeri+Malappuram+Kerala" target="_blank" rel="noopener noreferrer" class="bg-pickle-800 hover:bg-pickle-700 border border-pickle-700 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition">
+                            <i class="fa-solid fa-map-location-dot text-amberGold-500"></i> Location
                         </a>
                     </div>
 
@@ -320,13 +335,36 @@
         </div>
 
         <div class="p-4 bg-gray-50 border-t border-gray-100 space-y-3">
-            <div class="flex justify-between items-center text-xs">
-                <span class="text-gray-500">Total Items:</span>
-                <span id="drawer-qty-sum" class="font-bold text-gray-800">0</span>
+            <!-- Coupon Code Section -->
+            <div class="space-y-1">
+                <div class="flex gap-2">
+                    <input type="text" id="bag-coupon-input" placeholder="Promo code (e.g. PICKLE10)" class="flex-1 uppercase px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 focus:outline-none focus:ring-1 focus:ring-pickle-700 bg-white">
+                    <button onclick="applyBagCoupon()" class="px-3 py-1.5 bg-pickle-800 text-white rounded-lg text-xs font-bold hover:bg-pickle-700 transition">Apply</button>
+                </div>
+                <div id="bag-coupon-msg" class="text-[10px] hidden font-semibold"></div>
             </div>
-            <div class="flex justify-between items-center text-sm font-black text-pickle-900 pt-2 border-t border-gray-200">
-                <span>Estimated Total:</span>
-                <span id="drawer-grand-total" class="text-lg text-pickle-800">₹0</span>
+
+            <!-- Customer Details (Optional) -->
+            <div class="border-t border-gray-200 pt-2 space-y-1.5">
+                <span class="text-[10px] font-bold text-gray-500 uppercase block">Delivery Address (Optional):</span>
+                <input type="text" id="cust-name" placeholder="Your Name" class="w-full px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 bg-white">
+                <input type="text" id="cust-address" placeholder="Delivery Address / Landmark" class="w-full px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 bg-white">
+                <input type="text" id="cust-pincode" placeholder="Pincode (e.g. 676122)" maxlength="6" class="w-full px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 bg-white">
+            </div>
+
+            <div class="space-y-1 pt-2 border-t border-gray-200 text-xs">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-500">Subtotal:</span>
+                    <span id="drawer-subtotal" class="font-bold text-gray-800">₹0</span>
+                </div>
+                <div id="drawer-discount-row" class="flex justify-between items-center text-emerald-700 hidden">
+                    <span>Discount (10% OFF):</span>
+                    <span id="drawer-discount">-₹0</span>
+                </div>
+                <div class="flex justify-between items-center text-sm font-black text-pickle-900 pt-1 border-t border-gray-100">
+                    <span>Estimated Total:</span>
+                    <span id="drawer-grand-total" class="text-lg text-pickle-800">₹0</span>
+                </div>
             </div>
 
             <button onclick="sendCombinedWhatsAppOrder()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-xs shadow-md flex items-center justify-center gap-2 transition">
@@ -500,6 +538,28 @@
 
         // Shopping Bag state for multi-item checkout
         let shoppingBag = [];
+        let appliedDiscount = 0; // 0 or 0.10 (10%)
+
+        function applyBagCoupon() {
+            const input = document.getElementById('bag-coupon-input');
+            const msg = document.getElementById('bag-coupon-msg');
+            const code = input.value.trim().toUpperCase();
+
+            if (code === 'PICKLE10') {
+                appliedDiscount = 0.10;
+                msg.textContent = '🎉 10% discount applied successfully!';
+                msg.className = 'text-[10px] text-emerald-700 font-bold block';
+            } else if (code === '') {
+                appliedDiscount = 0;
+                msg.textContent = '';
+                msg.className = 'text-[10px] hidden';
+            } else {
+                appliedDiscount = 0;
+                msg.textContent = '❌ Invalid coupon. Try PICKLE10';
+                msg.className = 'text-[10px] text-red-600 font-bold block';
+            }
+            updateBagUI();
+        }
 
         let currentCategory = 'all';
         let currentSearchQuery = '';
@@ -663,13 +723,32 @@
         }
 
         function updateBagUI() {
+            try {
+                localStorage.setItem('picklearo_bag', JSON.stringify(shoppingBag));
+            } catch (e) {}
+
             const totalCount = shoppingBag.reduce((sum, item) => sum + item.qty, 0);
-            const grandTotal = shoppingBag.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const subtotal = shoppingBag.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const discountAmt = Math.round(subtotal * appliedDiscount);
+            const grandTotal = subtotal - discountAmt;
 
             // Update badge counters
             document.getElementById('nav-cart-count').textContent = totalCount;
             document.getElementById('drawer-item-count').textContent = totalCount;
-            document.getElementById('drawer-qty-sum').textContent = totalCount;
+            if (document.getElementById('drawer-qty-sum')) {
+                document.getElementById('drawer-qty-sum').textContent = totalCount;
+            }
+            if (document.getElementById('drawer-subtotal')) {
+                document.getElementById('drawer-subtotal').textContent = `₹${subtotal}`;
+            }
+            if (document.getElementById('drawer-discount-row')) {
+                if (discountAmt > 0) {
+                    document.getElementById('drawer-discount-row').classList.remove('hidden');
+                    document.getElementById('drawer-discount').textContent = `-₹${discountAmt}`;
+                } else {
+                    document.getElementById('drawer-discount-row').classList.add('hidden');
+                }
+            }
             document.getElementById('drawer-grand-total').textContent = `₹${grandTotal}`;
 
             const floatingBar = document.getElementById('floating-cart-bar');
@@ -767,7 +846,9 @@
                 return;
             }
 
-            const grandTotal = shoppingBag.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const subtotal = shoppingBag.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const discountAmt = Math.round(subtotal * appliedDiscount);
+            const grandTotal = subtotal - discountAmt;
             const totalCount = shoppingBag.reduce((sum, item) => sum + item.qty, 0);
 
             let itemsList = '';
@@ -775,7 +856,21 @@
                 itemsList += `${i + 1}. *${item.name}* (${item.weight}) x ${item.qty} = ₹${item.price * item.qty}\n`;
             });
 
-            const message = `Hello Picklearo! 🥒\n\nI would like to place an order from Muttipalam, Manjeri:\n\n${itemsList}\n*Total Items:* ${totalCount}\n*Payable Amount:* ₹${grandTotal}\n\nPlease send payment details (UPI/COD) and estimated delivery time to my address.`;
+            const custName = document.getElementById('cust-name') ? document.getElementById('cust-name').value.trim() : '';
+            const custAddress = document.getElementById('cust-address') ? document.getElementById('cust-address').value.trim() : '';
+            const custPincode = document.getElementById('cust-pincode') ? document.getElementById('cust-pincode').value.trim() : '';
+
+            let detailsText = '';
+            if (custName || custAddress || custPincode) {
+                detailsText = `\n*Delivery Details:*\n` +
+                    (custName ? `• *Name:* ${custName}\n` : '') +
+                    (custAddress ? `• *Address:* ${custAddress}\n` : '') +
+                    (custPincode ? `• *Pincode:* ${custPincode}\n` : '');
+            }
+
+            let discountText = discountAmt > 0 ? `\n*Promo Discount (PICKLE10):* -₹${discountAmt}` : '';
+
+            const message = `Hello Picklearo! 🥒\n\nI would like to place an order from Muttipalam, Manjeri:\n\n${itemsList}\n*Total Items:* ${totalCount}\n*Subtotal:* ₹${subtotal}${discountText}\n*Payable Amount:* ₹${grandTotal}\n${detailsText}\nPlease confirm order availability and send payment QR / details!`;
 
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/919074613342?text=${encodedMessage}`, '_blank');
@@ -783,6 +878,13 @@
 
         // Initialize category counters & render
         window.onload = function() {
+            try {
+                const savedBag = localStorage.getItem('picklearo_bag');
+                if (savedBag) {
+                    shoppingBag = JSON.parse(savedBag);
+                }
+            } catch (e) {}
+
             document.getElementById('total-count-badge').textContent = products.length;
             document.getElementById('cat-count-all').textContent = products.length;
             document.getElementById('cat-count-veg').textContent = products.filter(p => p.category === 'veg').length;
