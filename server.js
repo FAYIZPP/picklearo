@@ -2,44 +2,38 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 3000;
-const PUBLIC_DIR = __dirname;
+const PORT = 3000;
+const ROOT = __dirname;
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
   '.js': 'application/javascript; charset=utf-8',
-  '.json': 'application/json; charset=utf-8',
+  '.json': 'application/json',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
-  '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
-  '.webp': 'image/webp',
-  '.woff': 'font/woff',
-  '.woff2': 'font/woff2',
-  '.ttf': 'font/ttf'
 };
 
 const server = http.createServer((req, res) => {
-  // Normalize URL to prevent directory traversal
-  let safePath = path.normalize(decodeURIComponent(req.url.split('?')[0])).replace(/^(\.\.[\/\\])+/, '');
-  if (safePath === '/' || safePath === '\\') {
-    safePath = '/index.html';
-  }
+  let reqPath = decodeURI(req.url.split('?')[0]);
+  if (reqPath === '/') reqPath = '/index.html';
 
-  let filePath = path.join(PUBLIC_DIR, safePath);
+  const filePath = path.normalize(path.join(ROOT, reqPath));
 
-  // If path is a directory, look for index.html
-  if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
-    filePath = path.join(filePath, 'index.html');
+  // Security check
+  if (!filePath.startsWith(ROOT)) {
+    res.writeHead(403);
+    res.end('Forbidden');
+    return;
   }
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-      res.end('404 Not Found - Picklearo');
+      res.writeHead(404, { 'Content-Type': 'text/plain' });
+      res.end('404 Not Found');
       return;
     }
 
@@ -48,8 +42,8 @@ const server = http.createServer((req, res) => {
 
     res.writeHead(200, {
       'Content-Type': contentType,
-      'Cache-Control': 'no-cache',
-      'X-Content-Type-Options': 'nosniff'
+      'Content-Length': stats.size,
+      'Cache-Control': ext === '.jpg' || ext === '.png' ? 'public, max-age=86400' : 'no-cache',
     });
 
     const stream = fs.createReadStream(filePath);
@@ -57,10 +51,7 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`\n========================================`);
-  console.log(`  🥒 Picklearo Dev Server is Running!`);
-  console.log(`  URL: http://localhost:${PORT}`);
-  console.log(`========================================\n`);
+server.listen(PORT, '127.0.0.1', () => {
+  console.log(`PICKLEARO server running at http://localhost:${PORT}`);
 });
 

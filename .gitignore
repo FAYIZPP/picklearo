@@ -1,0 +1,11 @@
+# Dependencies & build cache
+node_modules/
+.vite/
+
+# Large source hero archive & uncompressed raw PNG frames (optimized Web-ready JPGs are tracked in hero/optimized/)
+hero/*.zip
+hero/*.png
+
+# OS files
+.DS_Store
+Thumbs.db

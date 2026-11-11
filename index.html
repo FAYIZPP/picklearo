@@ -1,899 +1,647 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picklearo Homemade Pickles | 100% Organic & FSSAI Certified</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        pickle: {
-                            50: '#f2f7f4',
-                            100: '#d9e8de',
-                            600: '#2b583f',
-                            700: '#1f412e',
-                            800: '#173123',
-                            900: '#102218'
-                        },
-                        amberGold: {
-                            500: '#d97706',
-                            600: '#b45309'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .viewport-transition {
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #c1d5c7; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #2b583f; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PICKLEARO — Premium 100% organic homemade pickles from Manjeri, Kerala. FSSAI Certified. 30+ varieties since 2020. Order via WhatsApp!" />
+  <title>PICKLEARO — Crunch. Tang. Obsessed.</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-[#faf8f5] text-gray-800 antialiased selection:bg-pickle-600 selection:text-white">
+<body>
+  <!-- ======== NAVBAR ======== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__brand" aria-label="PICKLEARO home">
+        <img src="logo.png" alt="PICKLEARO logo" class="navbar__logo-img" width="44" height="44" />
+        PICKLEARO
+      </a>
 
-    <!-- Interactive Viewport Toggle Bar -->
-    <div class="bg-pickle-900 text-white py-3 px-4 shadow-md sticky top-0 z-50 flex flex-wrap items-center justify-between gap-3 border-b border-pickle-800">
-        <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="text-xs sm:text-sm font-bold tracking-wide">🥒 Picklearo Storefront</span>
-            <span class="hidden sm:inline text-xs text-amber-200/80 bg-pickle-800 px-2 py-0.5 rounded-full border border-pickle-700">Muttipalam, Manjeri</span>
+      <nav class="navbar__nav" id="navMenu" aria-label="Main navigation">
+        <ul class="navbar__list">
+          <li><a href="#hero" class="navbar__link">Home</a></li>
+          <li><a href="#flavors" class="navbar__link">Flavors</a></li>
+          <li><a href="#story" class="navbar__link">Our Story</a></li>
+          <li><a href="#reviews" class="navbar__link">Reviews</a></li>
+          <li><a href="#contact" class="navbar__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://wa.me/919074613342?text=Hi%20PICKLEARO!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn--accent navbar__cta">
+        <!-- WhatsApp icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Order Now
+      </a>
+
+      <!-- Hamburger button -->
+      <button
+        class="navbar__hamburger"
+        id="navToggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ======== HERO (SCROLL-DRIVEN ANIMATION) ======== -->
+  <section class="hero-scroll" id="hero">
+    <div class="hero-scroll__sticky">
+      <!-- Full-bleed Canvas -->
+      <canvas
+        id="heroCanvas"
+        class="hero-scroll__canvas"
+        aria-label="Animated PICKLEARO pickle jar opening and bursting with fresh organic spices on scroll"
+      ></canvas>
+
+      <!-- Gradient Scrim for Text Legibility -->
+      <div class="hero-scroll__scrim"></div>
+
+      <!-- Stage 1 Overlay: Intro Headline & CTAs (0% -> 28% scroll) -->
+      <div class="container hero-scroll__stage hero-scroll__stage--1" id="heroStage1">
+        <div class="hero-scroll__content">
+          <span class="hero__badge">🌿 100% Organic · FSSAI Certified · Since 2020</span>
+          <h1 class="hero__title">Crunch.<br class="hero__br-desktop" /> Tang.<br /><span class="hero__title--accent">Obsessed.</span></h1>
+          <p class="hero__subtitle">
+            Handcrafted with farm-fresh organic ingredients and time-honoured Kerala recipes,
+            every jar of PICKLEARO delivers bold flavour and the perfect crunch. 30+ varieties
+            made with love in Manjeri.
+          </p>
+          <div class="hero__ctas">
+            <a href="https://wa.me/919074613342?text=Hi%20PICKLEARO!%20I'd%20like%20to%20see%20your%20menu%20and%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Order on WhatsApp
+            </a>
+            <a href="#flavors" class="btn btn--outline btn--lg">Explore Flavors</a>
+          </div>
+          <div class="hero__trust">
+            <div class="hero__trust-item">
+              <span class="hero__trust-number">30+</span>
+              <span class="hero__trust-label">Varieties</span>
+            </div>
+            <div class="hero__trust-divider"></div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-number">5+</span>
+              <span class="hero__trust-label">Years</span>
+            </div>
+            <div class="hero__trust-divider"></div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-number">100%</span>
+              <span class="hero__trust-label">Organic</span>
+            </div>
+          </div>
         </div>
-        <div class="flex items-center gap-2 bg-pickle-800 p-1 rounded-xl border border-pickle-700">
-            <button onclick="setViewport('mobile')" id="toggle-mobile" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-amberGold-500 text-white shadow transition flex items-center gap-1.5">
-                <i class="fa-solid fa-mobile-screen"></i> Phone Screen View
-            </button>
-            <button onclick="setViewport('desktop')" id="toggle-desktop" class="px-3.5 py-1.5 text-xs font-bold rounded-lg text-gray-300 hover:text-white transition flex items-center gap-1.5">
-                <i class="fa-solid fa-desktop"></i> Full Desktop View
-            </button>
+      </div>
+
+      <!-- Stage 2 Overlay: Mid-Scroll Burst Callout (35% -> 65% scroll) -->
+      <div class="container hero-scroll__stage hero-scroll__stage--2" id="heroStage2" aria-hidden="true">
+        <div class="hero-scroll__callout">
+          <span class="hero-scroll__callout-tag">⚡ Zero Artificial Preservatives</span>
+          <h2 class="hero-scroll__callout-title">Pure, Unfiltered<br />Kerala Spice.</h2>
+          <p class="hero-scroll__callout-text">
+            Sun-cured limes, fiery bird's-eye chillies, roasted garlic &amp; aromatic curry leaves sealed fresh.
+          </p>
         </div>
+      </div>
+
+      <!-- Stage 3 Overlay: Peak Explosion Finale (68% -> 96% scroll) -->
+      <div class="container hero-scroll__stage hero-scroll__stage--3" id="heroStage3" aria-hidden="true">
+        <div class="hero-scroll__callout hero-scroll__callout--right">
+          <span class="hero-scroll__callout-tag">🥒 30+ Homemade Varieties</span>
+          <h2 class="hero-scroll__callout-title">Taste the<br />Obsession.</h2>
+          <p class="hero-scroll__callout-text">
+            Small-batch handcrafted in Muttipalam, Manjeri. Delivery available across Kerala &amp; beyond.
+          </p>
+          <a href="https://wa.me/919074613342?text=Hi%20PICKLEARO!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm hero-scroll__callout-btn">
+            Order Now →
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Prompt Indicator -->
+      <div class="hero-scroll__prompt" id="heroScrollPrompt">
+        <span>Scroll to burst open</span>
+        <div class="hero-scroll__mouse" aria-hidden="true">
+          <div class="hero-scroll__wheel"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Scroll Progress Line -->
+      <div class="hero-scroll__progress" aria-hidden="true">
+        <div class="hero-scroll__progress-fill" id="heroProgressFill"></div>
+      </div>
     </div>
 
-    <!-- Main Viewport Wrapper -->
-    <div id="viewport-wrapper" class="w-full py-6 flex justify-center items-center bg-gray-900/10 min-h-screen viewport-transition">
-        
-        <!-- Smartphone Mockup Frame Container -->
-        <div id="phone-frame" class="w-full max-w-[430px] bg-black rounded-[48px] p-3.5 shadow-2xl border-4 border-gray-800 relative viewport-transition">
-            <!-- Speaker Notch & Camera (hidden in desktop view) -->
-            <div id="phone-notch" class="absolute top-5 left-1/2 transform -translate-x-1/2 w-32 h-5 bg-black rounded-full z-50 flex items-center justify-center gap-2">
-                <div class="w-3 h-3 rounded-full bg-gray-900 border border-gray-700"></div>
-                <div class="w-12 h-1.5 rounded-full bg-gray-800"></div>
-            </div>
+    <!-- Decorative wave -->
+    <div class="hero__wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C360,80 720,0 1440,40 L1440,80 L0,80 Z" fill="var(--clr-light)"/>
+      </svg>
+    </div>
+  </section>
 
-            <!-- Inner Screen Wrapper (Scrollable) -->
-            <div id="inner-screen" class="w-full h-[860px] bg-[#faf8f5] rounded-[38px] overflow-y-auto overflow-x-hidden relative shadow-inner">
-                
-                <!-- Top Announcement Bar -->
-                <div class="bg-pickle-800 text-amber-100 text-[11px] py-2 px-3 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-shield-halved text-amberGold-500"></i>
-                    <span>FSSAI Certified • Handcrafted in Muttipalam, Manjeri</span>
-                </div>
+  <!-- ======== WHY PICKLEARO ======== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">What Makes PICKLEARO Special</h2>
+        <p class="section-subtitle">Every jar is a promise — of quality, tradition, and unforgettable flavour.</p>
+      </div>
 
-                <!-- Sticky Navigation Bar Inside Screen -->
-                <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 px-4 py-2.5 flex items-center justify-between">
-                    <a href="#" class="flex items-center gap-2.5">
-                        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-pickle-700 shadow-sm bg-[#2b583f] flex items-center justify-center shrink-0">
-                            <img src="logo.png" alt="Picklearo Logo" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <span class="text-base font-extrabold text-pickle-900 leading-none block">Picklearo</span>
-                            <span class="text-[9px] font-semibold text-amberGold-600 uppercase tracking-wider">Homemade Pickles</span>
-                        </div>
-                    </a>
-
-                    <div class="flex items-center gap-2">
-                        <!-- Instagram Link Button -->
-                        <a href="https://www.instagram.com/picklearo?utm_source=ig_web_button_share_sheet&cplk=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 hover:opacity-90 text-white p-2 sm:px-2.5 sm:py-1.5 rounded-full font-semibold text-xs flex items-center gap-1.5 shadow-xs transition" title="Follow @picklearo on Instagram">
-                            <i class="fa-brands fa-instagram text-sm"></i>
-                            <span class="hidden sm:inline">Instagram</span>
-                        </a>
-
-                        <!-- Cart Drawer Trigger Button -->
-                        <button onclick="toggleCartDrawer()" class="relative p-2 text-pickle-800 hover:text-pickle-600 transition" title="View Order Bag">
-                            <i class="fa-solid fa-bag-shopping text-lg"></i>
-                            <span id="nav-cart-count" class="absolute -top-1 -right-1 bg-amberGold-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
-                        </button>
-
-                        <a href="https://wa.me/919074613342?text=Hi%20Picklearo,%20I%20want%20to%20order%20pickles!" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-full font-semibold text-xs flex items-center gap-1.5 shadow transition">
-                            <i class="fa-brands fa-whatsapp text-sm"></i>
-                            <span>Chat</span>
-                        </a>
-                    </div>
-                </header>
-
-                <!-- Hero Section Inside Screen -->
-                <section class="relative bg-gradient-to-b from-pickle-50 via-pickle-50/60 to-[#faf8f5] py-7 px-4 text-center">
-                    <!-- Picklearo Grandma Logo Emblem -->
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto mb-3 rounded-full overflow-hidden border-4 border-[#2b583f] shadow-lg bg-[#2b583f] p-0.5">
-                        <img src="logo.png" alt="Picklearo Grandma Logo" class="w-full h-full object-cover rounded-full">
-                    </div>
-
-                    <div class="inline-flex items-center gap-1.5 bg-pickle-100 text-pickle-800 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2.5 shadow-xs">
-                        <i class="fa-solid fa-award text-amberGold-600"></i> Since 2020 • 100% Homemade
-                    </div>
-                    
-                    <h1 class="text-2xl sm:text-3xl font-black text-pickle-900 tracking-tight leading-snug mb-3">
-                        Authentic Taste in <span class="text-amberGold-600 underline decoration-amberGold-500/40">Every Bite</span>
-                    </h1>
-                    
-                    <p class="text-xs sm:text-sm text-gray-600 mb-6 max-w-lg mx-auto leading-relaxed">
-                        Slowly aged in traditional ceramic jars with pure cold-pressed oils & heirloom spice blends from Muttipalam, Manjeri.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-2.5 justify-center max-w-md mx-auto">
-                        <a href="#catalog" onclick="scrollToCatalog(event)" class="w-full sm:w-auto flex-1 bg-pickle-700 hover:bg-pickle-800 text-white py-3 px-5 rounded-xl font-bold text-xs shadow-md flex items-center justify-center gap-2 transition">
-                            <i class="fa-solid fa-jar text-amberGold-500"></i> Browse Collection (<span id="total-count-badge">12</span>)
-                        </a>
-                        <a href="https://wa.me/919074613342?text=Hi%20Picklearo,%20please%20send%20today's%20fresh%20pickle%20menu!" target="_blank" class="w-full sm:w-auto flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-5 rounded-xl font-bold text-xs shadow-md flex items-center justify-center gap-2 transition">
-                            <i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp
-                        </a>
-                    </div>
-
-                    <!-- Quick Trust Stats -->
-                    <div class="grid grid-cols-3 gap-2 mt-6 pt-5 border-t border-gray-200/80 max-w-md mx-auto">
-                        <div>
-                            <span class="block text-lg font-black text-pickle-800">100%</span>
-                            <span class="text-[10px] text-gray-500 font-medium">Preservative Free</span>
-                        </div>
-                        <div class="border-x border-gray-200 px-2">
-                            <span class="block text-lg font-black text-pickle-800">Sun-Cured</span>
-                            <span class="text-[10px] text-gray-500 font-medium">Ancient Clay Jars</span>
-                        </div>
-                        <div>
-                            <span class="block text-lg font-black text-pickle-800">FSSAI</span>
-                            <span class="text-[10px] text-gray-500 font-medium">Certified Kitchen</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Value Pillars / Quality Guarantee -->
-                <section class="py-6 px-4 bg-white border-y border-gray-100">
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
-                        <div class="bg-pickle-50/70 p-3 rounded-xl text-center border border-pickle-100/60">
-                            <i class="fa-solid fa-seedling text-pickle-700 text-base mb-1"></i>
-                            <h4 class="text-xs font-bold text-pickle-900">Zero Chemicals</h4>
-                            <p class="text-[10px] text-gray-500">No artificial colors</p>
-                        </div>
-                        <div class="bg-pickle-50/70 p-3 rounded-xl text-center border border-pickle-100/60">
-                            <i class="fa-solid fa-droplet text-amberGold-600 text-base mb-1"></i>
-                            <h4 class="text-xs font-bold text-pickle-900">Pure Oils</h4>
-                            <p class="text-[10px] text-gray-500">Cold-pressed sesame/coconut</p>
-                        </div>
-                        <div class="bg-pickle-50/70 p-3 rounded-xl text-center border border-pickle-100/60">
-                            <i class="fa-solid fa-sun text-amberGold-500 text-base mb-1"></i>
-                            <h4 class="text-xs font-bold text-pickle-900">Sun Matured</h4>
-                            <p class="text-[10px] text-gray-500">Aged 21 days naturally</p>
-                        </div>
-                        <div class="bg-pickle-50/70 p-3 rounded-xl text-center border border-pickle-100/60">
-                            <i class="fa-solid fa-truck-fast text-emerald-600 text-base mb-1"></i>
-                            <h4 class="text-xs font-bold text-pickle-900">Fresh Packing</h4>
-                            <p class="text-[10px] text-gray-500">Direct from kitchen</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Product Catalog Section -->
-                <section id="catalog" class="py-8 px-4 bg-[#faf8f5]">
-                    <div class="max-w-4xl mx-auto">
-                        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-5">
-                            <div>
-                                <span class="text-[10px] font-bold text-amberGold-600 uppercase tracking-wider block">Kitchen Fresh Batches</span>
-                                <h2 class="text-xl sm:text-2xl font-black text-pickle-900">Explore Handcrafted Pickles</h2>
-                            </div>
-
-                            <!-- Search Input -->
-                            <div class="relative w-full sm:w-64">
-                                <input type="text" id="catalog-search" oninput="handleSearch(this.value)" placeholder="Search mango, beef, garlic..." class="w-full pl-8 pr-3 py-2 text-xs rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pickle-600 bg-white">
-                                <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-gray-400 text-xs"></i>
-                            </div>
-                        </div>
-
-                        <!-- Category Filter Tabs -->
-                        <div class="flex gap-2 overflow-x-auto pb-2 mb-4 scrollbar-none">
-                            <button onclick="filterCategory('all')" id="btn-all" class="category-btn px-3 py-1.5 rounded-lg font-bold text-xs bg-pickle-700 text-white whitespace-nowrap shadow-sm">All (<span id="cat-count-all">0</span>)</button>
-                            <button onclick="filterCategory('veg')" id="btn-veg" class="category-btn px-3 py-1.5 rounded-lg font-bold text-xs bg-white text-gray-700 border border-gray-200 whitespace-nowrap">Vegetarian (<span id="cat-count-veg">0</span>)</button>
-                            <button onclick="filterCategory('non-veg')" id="btn-non-veg" class="category-btn px-3 py-1.5 rounded-lg font-bold text-xs bg-white text-gray-700 border border-gray-200 whitespace-nowrap">Non-Veg Special (<span id="cat-count-non-veg">0</span>)</button>
-                            <button onclick="filterCategory('special')" id="btn-special" class="category-btn px-3 py-1.5 rounded-lg font-bold text-xs bg-white text-gray-700 border border-gray-200 whitespace-nowrap">Specialties (<span id="cat-count-special">0</span>)</button>
-                        </div>
-
-                        <!-- Product Grid -->
-                        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <!-- Populated dynamically via JavaScript -->
-                        </div>
-
-                        <!-- Empty State if search finds nothing -->
-                        <div id="no-products-msg" class="hidden text-center py-12">
-                            <div class="text-3xl mb-2">🥒</div>
-                            <h3 class="text-sm font-bold text-gray-800">No Pickles Found</h3>
-                            <p class="text-xs text-gray-500 mt-1">Try another search keyword or clear the search filter.</p>
-                            <button onclick="clearSearch()" class="mt-3 px-4 py-1.5 bg-pickle-700 text-white rounded-lg text-xs font-bold">Show All Pickles</button>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Customer Reviews Section -->
-                <section class="py-8 px-4 bg-white border-t border-gray-100">
-                    <div class="max-w-4xl mx-auto">
-                        <div class="text-center mb-6">
-                            <span class="text-[10px] font-bold text-amberGold-600 uppercase tracking-wider">Testimonials</span>
-                            <h2 class="text-lg sm:text-xl font-extrabold text-pickle-900">What Our Pickle Family Says</h2>
-                            <div class="flex items-center justify-center gap-1 text-amberGold-500 text-xs mt-1">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                <span class="text-gray-500 text-[11px] font-semibold ml-1">4.9 / 5.0 (500+ orders)</span>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <div class="bg-[#faf8f5] p-3.5 rounded-xl border border-gray-200/60 text-xs">
-                                <div class="flex text-amberGold-500 mb-1 text-[10px]">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 italic mb-2">"The Beef Roast pickle and Tender Mango taste just like my grandmother's recipe in Malappuram. The cold-pressed coconut oil aroma is unmistakable!"</p>
-                                <span class="font-bold text-pickle-900 block text-[11px]">— Aswathy Ramesh, Kozhikode</span>
-                            </div>
-
-                            <div class="bg-[#faf8f5] p-3.5 rounded-xl border border-gray-200/60 text-xs">
-                                <div class="flex text-amberGold-500 mb-1 text-[10px]">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 italic mb-2">"No vinegar taste at all! The Garlic pickle and Chemmeen (Prawns) pickle are pure perfection with hot kanji and parathas. Fast delivery too."</p>
-                                <span class="font-bold text-pickle-900 block text-[11px]">— Faisal K., Manjeri</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Footer Inside Screen -->
-                <footer class="bg-pickle-900 text-white p-6 text-center text-xs space-y-4">
-                    <div class="max-w-md mx-auto">
-                        <div class="w-16 h-16 mx-auto mb-2 rounded-full overflow-hidden border-2 border-pickle-700 bg-[#2b583f] shadow-md p-0.5">
-                            <img src="logo.png" alt="Picklearo Logo" class="w-full h-full object-cover rounded-full">
-                        </div>
-                        <span class="font-extrabold text-base block mb-0.5">Picklearo Homemade Pickles</span>
-                        <p class="text-gray-300 text-[11px] leading-relaxed">
-                            Muttipalam, Manjeri, Malappuram District, Kerala — 676122.<br>
-                            FSSAI Lic. Verified Kitchen • 100% Homemade Quality
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto justify-center">
-                        <a href="https://www.instagram.com/picklearo?utm_source=ig_web_button_share_sheet&cplk=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 hover:opacity-90 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition shadow-xs">
-                            <i class="fa-brands fa-instagram text-base"></i> Follow @picklearo
-                        </a>
-                        <a href="https://wa.me/919074613342?text=Hi%20Picklearo,%20I%20have%20an%20inquiry." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition shadow-xs">
-                            <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Order
-                        </a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Muttipalam+Manjeri+Malappuram+Kerala" target="_blank" rel="noopener noreferrer" class="bg-pickle-800 hover:bg-pickle-700 border border-pickle-700 text-white px-4 py-2.5 rounded-xl font-bold inline-flex items-center gap-2 text-xs justify-center transition">
-                            <i class="fa-solid fa-map-location-dot text-amberGold-500"></i> Location
-                        </a>
-                    </div>
-
-                    <p class="text-[10px] text-gray-400 pt-3 border-t border-pickle-800">
-                        &copy; 2026 Picklearo. Handcrafted with pride in Kerala.
-                    </p>
-                </footer>
-
-            </div>
-            <!-- Home Bar Indicator on Mockup Frame -->
-            <div id="phone-homebar" class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gray-600 rounded-full"></div>
+      <div class="features__grid">
+        <!-- Card 1 -->
+        <div class="feature-card" data-reveal>
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="8" y="10" width="32" height="28" rx="4"/>
+              <path d="M16 10V6h16v4"/>
+              <path d="M24 20v8"/>
+              <path d="M20 24h8"/>
+              <circle cx="24" cy="24" r="10" stroke-dasharray="3 3"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">FSSAI Certified</h3>
+          <p class="feature-card__text">Licensed and certified by FSSAI for food safety. Every jar meets the highest standards of hygiene and quality.</p>
         </div>
 
+        <!-- Card 2 -->
+        <div class="feature-card" data-reveal data-reveal-delay="100">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M24 44c-10 0-18-6-18-14 0-10 18-26 18-26s18 16 18 26c0 8-8 14-18 14z"/>
+              <path d="M24 44V22"/>
+              <path d="M18 30l6-6"/>
+              <path d="M30 34l-6-6"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">100% Organic</h3>
+          <p class="feature-card__text">Absolutely zero artificial colours, flavours, or preservatives. Pure organic ingredients, straight from nature.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card" data-reveal data-reveal-delay="200">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 24c0-8 5-16 12-16s12 8 12 16"/>
+              <path d="M8 28h32"/>
+              <path d="M12 28v10c0 2 2 4 4 4h16c2 0 4-2 4-4V28"/>
+              <path d="M24 8V4M20 28v8M28 28v8"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Farm-Fresh Ingredients</h3>
+          <p class="feature-card__text">We source the freshest produce from Kerala's local farms, picked at the peak of ripeness for maximum flavour.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card" data-reveal data-reveal-delay="300">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 40V16l16-12 16 12v24H8z"/>
+              <rect x="18" y="26" width="12" height="14"/>
+              <path d="M18 26v-6l6-4 6 4v6"/>
+              <path d="M14 20v-2"/>
+              <path d="M34 20v-2"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Traditional Recipes</h3>
+          <p class="feature-card__text">Passed down through generations of Kerala tradition, our recipes honour time-tested methods that deliver authentic taste.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FLAVORS / PRODUCTS ======== -->
+  <section class="flavors" id="flavors">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label section-label--light">Our Range</span>
+        <h2 class="section-title section-title--light">Pick Your Pickle</h2>
+        <p class="section-subtitle section-subtitle--light">30+ bold varieties, each one a jar of pure obsession. Here are some favourites.</p>
+      </div>
+
+      <div class="flavors__grid">
+        <!-- Product 1 -->
+        <article class="product-card" data-reveal>
+          <div class="product-card__image">
+            <svg viewBox="0 0 200 260" fill="none" aria-label="Classic Dill pickle jar">
+              <rect x="30" y="60" width="140" height="170" rx="20" fill="#E8F5E9" stroke="#A3E635" stroke-width="2"/>
+              <rect x="55" y="30" width="90" height="38" rx="6" fill="#E8F5E9" stroke="#A3E635" stroke-width="2"/>
+              <rect x="42" y="18" width="116" height="18" rx="8" fill="#0B3D2E"/>
+              <rect x="33" y="120" width="134" height="108" rx="18" fill="#D4EDDA" opacity=".5"/>
+              <ellipse cx="80" cy="170" rx="12" ry="38" fill="#A3E635" transform="rotate(-8 80 170)" opacity=".8"/>
+              <ellipse cx="120" cy="175" rx="11" ry="35" fill="#84CC16" transform="rotate(10 120 175)" opacity=".75"/>
+            </svg>
+            <span class="product-card__badge">Bestseller</span>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Classic Dill</h3>
+            <p class="product-card__desc">Our signature dill pickle — crisp, garlicky, and perfectly tangy.</p>
+            <div class="product-card__footer">
+              <a href="https://wa.me/919074613342?text=Hi!%20I'd%20like%20to%20order%20Classic%20Dill%20pickle." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm btn--wa">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card" data-reveal data-reveal-delay="100">
+          <div class="product-card__image">
+            <svg viewBox="0 0 200 260" fill="none" aria-label="Spicy Garlic pickle jar">
+              <rect x="30" y="60" width="140" height="170" rx="20" fill="#FEF2F2" stroke="#F87171" stroke-width="2"/>
+              <rect x="55" y="30" width="90" height="38" rx="6" fill="#FEF2F2" stroke="#F87171" stroke-width="2"/>
+              <rect x="42" y="18" width="116" height="18" rx="8" fill="#991B1B"/>
+              <rect x="33" y="120" width="134" height="108" rx="18" fill="#FECACA" opacity=".4"/>
+              <ellipse cx="80" cy="170" rx="12" ry="38" fill="#F87171" transform="rotate(-8 80 170)" opacity=".7"/>
+              <ellipse cx="120" cy="175" rx="11" ry="35" fill="#EF4444" transform="rotate(10 120 175)" opacity=".65"/>
+            </svg>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Spicy Garlic</h3>
+            <p class="product-card__desc">A fiery kick of red chilli layered with bold roasted garlic.</p>
+            <div class="product-card__footer">
+              <a href="https://wa.me/919074613342?text=Hi!%20I'd%20like%20to%20order%20Spicy%20Garlic%20pickle." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm btn--wa">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card" data-reveal data-reveal-delay="200">
+          <div class="product-card__image">
+            <svg viewBox="0 0 200 260" fill="none" aria-label="Mango Achar pickle jar">
+              <rect x="30" y="60" width="140" height="170" rx="20" fill="#FFFBEB" stroke="#FBBF24" stroke-width="2"/>
+              <rect x="55" y="30" width="90" height="38" rx="6" fill="#FFFBEB" stroke="#FBBF24" stroke-width="2"/>
+              <rect x="42" y="18" width="116" height="18" rx="8" fill="#92400E"/>
+              <rect x="33" y="120" width="134" height="108" rx="18" fill="#FDE68A" opacity=".4"/>
+              <ellipse cx="85" cy="168" rx="18" ry="22" fill="#FBBF24" transform="rotate(-5 85 168)" opacity=".8"/>
+              <ellipse cx="118" cy="178" rx="16" ry="20" fill="#F59E0B" transform="rotate(8 118 178)" opacity=".75"/>
+            </svg>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Mango Achar</h3>
+            <p class="product-card__desc">Sun-ripened mangoes spiced with mustard oil and traditional Kerala masala.</p>
+            <div class="product-card__footer">
+              <a href="https://wa.me/919074613342?text=Hi!%20I'd%20like%20to%20order%20Mango%20Achar%20pickle." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm btn--wa">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card" data-reveal>
+          <div class="product-card__image">
+            <svg viewBox="0 0 200 260" fill="none" aria-label="Lime pickle jar">
+              <rect x="30" y="60" width="140" height="170" rx="20" fill="#F0FDF4" stroke="#4ADE80" stroke-width="2"/>
+              <rect x="55" y="30" width="90" height="38" rx="6" fill="#F0FDF4" stroke="#4ADE80" stroke-width="2"/>
+              <rect x="42" y="18" width="116" height="18" rx="8" fill="#166534"/>
+              <rect x="33" y="120" width="134" height="108" rx="18" fill="#BBF7D0" opacity=".4"/>
+              <circle cx="82" cy="170" r="18" fill="#4ADE80" opacity=".8"/>
+              <circle cx="118" cy="175" r="16" fill="#22C55E" opacity=".7"/>
+              <path d="M76 170 L88 170 M82 164 L82 176" stroke="#166534" stroke-width="1.5" opacity=".5"/>
+            </svg>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Lime Pickle</h3>
+            <p class="product-card__desc">Zesty whole limes cured in salt and spices for a citrus-tangy punch.</p>
+            <div class="product-card__footer">
+              <a href="https://wa.me/919074613342?text=Hi!%20I'd%20like%20to%20order%20Lime%20pickle." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm btn--wa">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product-card" data-reveal data-reveal-delay="100">
+          <div class="product-card__image">
+            <svg viewBox="0 0 200 260" fill="none" aria-label="Mixed Veg pickle jar">
+              <rect x="30" y="60" width="140" height="170" rx="20" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/>
+              <rect x="55" y="30" width="90" height="38" rx="6" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/>
+              <rect x="42" y="18" width="116" height="18" rx="8" fill="#9A3412"/>
+              <rect x="33" y="120" width="134" height="108" rx="18" fill="#FED7AA" opacity=".4"/>
+              <ellipse cx="75" cy="165" rx="14" ry="18" fill="#FB923C" opacity=".75"/>
+              <ellipse cx="105" cy="180" rx="12" ry="25" fill="#A3E635" opacity=".7" transform="rotate(10 105 180)"/>
+              <circle cx="130" cy="165" r="12" fill="#FBBF24" opacity=".7"/>
+            </svg>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Mixed Veg</h3>
+            <p class="product-card__desc">A colourful medley of seasonal vegetables pickled in aromatic spices.</p>
+            <div class="product-card__footer">
+              <a href="https://wa.me/919074613342?text=Hi!%20I'd%20like%20to%20order%20Mixed%20Veg%20pickle." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm btn--wa">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="product-card" data-reveal data-reveal-delay="200">
+          <div class="product-card__image">
+            <svg viewBox="0 0 200 260" fill="none" aria-label="Green Chilli pickle jar">
+              <rect x="30" y="60" width="140" height="170" rx="20" fill="#ECFDF5" stroke="#34D399" stroke-width="2"/>
+              <rect x="55" y="30" width="90" height="38" rx="6" fill="#ECFDF5" stroke="#34D399" stroke-width="2"/>
+              <rect x="42" y="18" width="116" height="18" rx="8" fill="#065F46"/>
+              <rect x="33" y="120" width="134" height="108" rx="18" fill="#A7F3D0" opacity=".4"/>
+              <path d="M75 195 Q80 140 90 155 Q95 165 85 195Z" fill="#34D399" opacity=".8"/>
+              <path d="M110 200 Q115 145 125 160 Q130 170 120 200Z" fill="#10B981" opacity=".75" transform="rotate(8 115 170)"/>
+              <path d="M88 150 Q86 140 90 138" stroke="#065F46" stroke-width="1.5" fill="none"/>
+            </svg>
+            <span class="product-card__badge product-card__badge--new">New</span>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__name">Green Chilli</h3>
+            <p class="product-card__desc">Crunchy whole green chillies with a slow-building heat and tangy finish.</p>
+            <div class="product-card__footer">
+              <a href="https://wa.me/919074613342?text=Hi!%20I'd%20like%20to%20order%20Green%20Chilli%20pickle." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--sm btn--wa">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA to see full catalog on WhatsApp -->
+      <div class="flavors__cta" data-reveal>
+        <p class="flavors__cta-text">Want to see all 30+ varieties?</p>
+        <a href="https://wa.me/919074613342?text=Hi%20PICKLEARO!%20Can%20you%20share%20the%20full%20catalog%20of%20all%20your%20pickle%20varieties%3F" target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Get Full Catalog on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== OUR STORY ======== -->
+  <section class="story" id="story">
+    <div class="container story__inner">
+      <div class="story__image" data-reveal>
+        <!-- Decorative SVG illustration -->
+        <svg class="story__illustration" viewBox="0 0 500 400" fill="none" aria-label="Kerala farm illustration">
+          <!-- Background field -->
+          <rect width="500" height="400" rx="20" fill="#0A3526"/>
+          <!-- Sun -->
+          <circle cx="400" cy="80" r="40" fill="#FBBF24" opacity=".3"/>
+          <circle cx="400" cy="80" r="28" fill="#FBBF24" opacity=".5"/>
+          <!-- Hills -->
+          <ellipse cx="250" cy="340" rx="300" ry="100" fill="#14532D"/>
+          <ellipse cx="120" cy="360" rx="180" ry="80" fill="#166534"/>
+          <!-- Coconut palm trees (Kerala feel) -->
+          <rect x="77" y="260" width="6" height="70" rx="2" fill="#92400E" opacity=".6" transform="rotate(-5 80 295)"/>
+          <ellipse cx="80" cy="250" rx="28" ry="18" fill="#22C55E" opacity=".6"/>
+          <path d="M60 250 Q80 230 100 250" stroke="#166534" stroke-width="2" fill="none" opacity=".4"/>
+          <rect x="347" y="250" width="6" height="80" rx="2" fill="#92400E" opacity=".5" transform="rotate(3 350 290)"/>
+          <ellipse cx="350" cy="240" rx="32" ry="20" fill="#16A34A" opacity=".5"/>
+          <!-- Small house -->
+          <rect x="200" y="260" width="70" height="50" rx="4" fill="#92400E" opacity=".8"/>
+          <polygon points="190,260 280,260 235,225" fill="#7C2D12" opacity=".8"/>
+          <rect x="225" y="278" width="18" height="32" rx="2" fill="#FBBF24" opacity=".6"/>
+          <!-- Pickle jars on a shelf -->
+          <rect x="140" y="300" width="10" height="16" rx="2" fill="#A3E635" opacity=".6"/>
+          <rect x="155" y="298" width="10" height="18" rx="2" fill="#FBBF24" opacity=".5"/>
+          <rect x="170" y="300" width="10" height="16" rx="2" fill="#F87171" opacity=".5"/>
+          <rect x="136" y="316" width="48" height="3" rx="1" fill="#92400E" opacity=".5"/>
+          <!-- Pickle rows in field -->
+          <ellipse cx="100" cy="345" rx="8" ry="4" fill="#A3E635" opacity=".6"/>
+          <ellipse cx="130" cy="348" rx="8" ry="4" fill="#A3E635" opacity=".5"/>
+          <ellipse cx="160" cy="345" rx="8" ry="4" fill="#A3E635" opacity=".6"/>
+          <ellipse cx="310" cy="340" rx="8" ry="4" fill="#A3E635" opacity=".5"/>
+          <ellipse cx="340" cy="343" rx="8" ry="4" fill="#A3E635" opacity=".6"/>
+          <ellipse cx="370" cy="340" rx="8" ry="4" fill="#A3E635" opacity=".5"/>
+          <ellipse cx="400" cy="345" rx="8" ry="4" fill="#A3E635" opacity=".4"/>
+        </svg>
+      </div>
+
+      <div class="story__text" data-reveal data-reveal-delay="200">
+        <span class="section-label section-label--light">Our Story</span>
+        <h2 class="section-title section-title--light">From Kerala's Heart,<br />To Your Table</h2>
+        <p class="story__body">
+          PICKLEARO was born in 2020 in the lush green heart of Kerala — Muttipalam, Manjeri — where
+          generations of our family have turned the season's freshest organic produce into jars of
+          tangy perfection. Those traditional recipes became the foundation of everything we do.
+        </p>
+        <p class="story__body">
+          We partner directly with local Kerala farmers who share our obsession with quality and
+          organic farming. Every ingredient is hand-selected, every spice blend mixed by hand, and
+          every jar sealed with the same care our family gave their very first batch.
+        </p>
+        <p class="story__body">
+          What started as a home kitchen passion is now loved across Kerala and beyond — with 30+
+          varieties, FSSAI certification, and delivery available. But we still make every jar the
+          old-fashioned way, because some things should never change.
+        </p>
+        <a href="https://wa.me/919074613342?text=Hi%20PICKLEARO!%20I'd%20love%20to%20know%20more%20about%20your%20story." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat With Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">Customer Love</span>
+        <h2 class="section-title">What Pickle Lovers Say</h2>
+        <p class="section-subtitle">Don't just take our word for it — hear from the PICKLEARO family.</p>
+      </div>
+
+      <div class="reviews__grid">
+        <!-- Review 1 -->
+        <div class="review-card" data-reveal>
+          <div class="review-card__stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+          <blockquote class="review-card__text">
+            "These are the best pickles I've ever tasted. The Mango Achar reminds me of my ammuma's kitchen. Absolutely authentic Kerala flavour — my fridge is never without a jar now!"
+          </blockquote>
+          <div class="review-card__author">
+            <div class="review-card__avatar" aria-hidden="true">SK</div>
+            <div>
+              <p class="review-card__name">Sreelakshmi K.</p>
+              <p class="review-card__role">Kozhikode</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card" data-reveal data-reveal-delay="100">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+          <blockquote class="review-card__text">
+            "100% organic and you can really taste the difference! The lime pickle is incredible. Ordered via WhatsApp and got it delivered to Bangalore within days. Amazing service."
+          </blockquote>
+          <div class="review-card__author">
+            <div class="review-card__avatar" aria-hidden="true">RP</div>
+            <div>
+              <p class="review-card__name">Rahul P.</p>
+              <p class="review-card__role">Bangalore</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card" data-reveal data-reveal-delay="200">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+          <blockquote class="review-card__text">
+            "FSSAI certified gives me peace of mind. The mixed veg pickle is a hit with my whole family. Love that there are 30+ varieties to choose from. Already on my 4th order!"
+          </blockquote>
+          <div class="review-card__author">
+            <div class="review-card__avatar" aria-hidden="true">FA</div>
+            <div>
+              <p class="review-card__name">Fathima A.</p>
+              <p class="review-card__role">Manjeri</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== NEWSLETTER / ORDER CTA ======== -->
+  <section class="newsletter" id="contact">
+    <div class="container newsletter__inner">
+      <div class="newsletter__text" data-reveal>
+        <h2 class="section-title section-title--light">Ready to Order?</h2>
+        <p class="section-subtitle section-subtitle--light">
+          Message us on WhatsApp to browse our full catalog, place an order, or ask about delivery.
+          We deliver across Kerala and beyond! 🚚
+        </p>
+      </div>
+      <div class="newsletter__actions" data-reveal data-reveal-delay="200">
+        <a href="https://wa.me/919074613342?text=Hi%20PICKLEARO!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn--accent btn--xl">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order on WhatsApp
+        </a>
+        <a href="tel:+919074613342" class="btn btn--outline btn--xl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          Call Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo" aria-label="PICKLEARO home">
+          <img src="logo.png" alt="PICKLEARO" class="footer__logo-img" width="40" height="40" />
+          PICKLEARO
+        </a>
+        <p class="footer__tagline">Crunch. Tang. Obsessed.</p>
+        <p class="footer__tagline">Since 2020 · FSSAI Certified · 100% Organic 🌿</p>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#flavors">Flavors</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Order Now</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Information</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Delivery Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__contact">
+        <h4 class="footer__heading">Get in Touch</h4>
+        <p>
+          <a href="tel:+919074613342" class="footer__contact-link">📞 +91 90746 13342</a>
+        </p>
+        <p>
+          <a href="https://wa.me/919074613342" target="_blank" rel="noopener noreferrer" class="footer__contact-link">💬 WhatsApp Order</a>
+        </p>
+        <p>
+          <a href="https://goo.gl/maps/mvAyb3RRS4bCgnX57" target="_blank" rel="noopener noreferrer" class="footer__contact-link">📍 Muttipalam, Manjeri, Kerala</a>
+        </p>
+        <p>🚚 Delivery Available</p>
+        <div class="footer__socials">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/919074613342" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <!-- Floating Bag / Cart Button for Quick Multi-Item Order -->
-    <div id="floating-cart-bar" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-md px-4 transition-all duration-300 hidden">
-        <div class="bg-pickle-900 text-white rounded-2xl p-3 shadow-2xl border border-pickle-700 flex items-center justify-between gap-3">
-            <div class="flex items-center gap-2.5">
-                <div class="w-9 h-9 rounded-xl bg-amberGold-500 flex items-center justify-center font-bold text-sm">
-                    <span id="floating-cart-count">0</span>
-                </div>
-                <div>
-                    <span class="text-xs font-bold block">Selected Items in Bag</span>
-                    <span id="floating-cart-total" class="text-sm font-black text-amber-300">₹0</span>
-                </div>
-            </div>
-            <button onclick="toggleCartDrawer()" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2 px-3.5 rounded-xl flex items-center gap-1.5 shadow transition">
-                <span>View Bag & Order</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-            </button>
-        </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 PICKLEARO. All rights reserved. Made with 🥒 and love in Manjeri, Kerala.</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- Slide-Over Shopping Bag / Cart Drawer -->
-    <div id="cart-drawer-backdrop" onclick="toggleCartDrawer()" class="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 transition-opacity hidden"></div>
-    <div id="cart-drawer" class="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
-        <div class="p-4 bg-pickle-900 text-white flex items-center justify-between border-b border-pickle-800">
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-bag-shopping text-amberGold-500"></i>
-                <h3 class="font-extrabold text-sm">Your Pickle Bag (<span id="drawer-item-count">0</span> items)</h3>
-            </div>
-            <button onclick="toggleCartDrawer()" class="text-gray-400 hover:text-white text-lg p-1">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
+  <!-- ======== FLOATING WHATSAPP BUTTON ======== -->
+  <a
+    href="https://wa.me/919074613342?text=Hi%20PICKLEARO!%20I'd%20like%20to%20place%20an%20order."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-fab"
+    aria-label="Order on WhatsApp"
+    id="whatsappFab"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-fab__label">Order Now</span>
+  </a>
 
-        <div id="drawer-items-list" class="flex-1 overflow-y-auto p-4 space-y-3">
-            <!-- Injected via JavaScript -->
-        </div>
-
-        <div class="p-4 bg-gray-50 border-t border-gray-100 space-y-3">
-            <!-- Coupon Code Section -->
-            <div class="space-y-1">
-                <div class="flex gap-2">
-                    <input type="text" id="bag-coupon-input" placeholder="Promo code (e.g. PICKLE10)" class="flex-1 uppercase px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 focus:outline-none focus:ring-1 focus:ring-pickle-700 bg-white">
-                    <button onclick="applyBagCoupon()" class="px-3 py-1.5 bg-pickle-800 text-white rounded-lg text-xs font-bold hover:bg-pickle-700 transition">Apply</button>
-                </div>
-                <div id="bag-coupon-msg" class="text-[10px] hidden font-semibold"></div>
-            </div>
-
-            <!-- Customer Details (Optional) -->
-            <div class="border-t border-gray-200 pt-2 space-y-1.5">
-                <span class="text-[10px] font-bold text-gray-500 uppercase block">Delivery Address (Optional):</span>
-                <input type="text" id="cust-name" placeholder="Your Name" class="w-full px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 bg-white">
-                <input type="text" id="cust-address" placeholder="Delivery Address / Landmark" class="w-full px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 bg-white">
-                <input type="text" id="cust-pincode" placeholder="Pincode (e.g. 676122)" maxlength="6" class="w-full px-2.5 py-1.5 text-xs rounded-lg border border-gray-200 bg-white">
-            </div>
-
-            <div class="space-y-1 pt-2 border-t border-gray-200 text-xs">
-                <div class="flex justify-between items-center">
-                    <span class="text-gray-500">Subtotal:</span>
-                    <span id="drawer-subtotal" class="font-bold text-gray-800">₹0</span>
-                </div>
-                <div id="drawer-discount-row" class="flex justify-between items-center text-emerald-700 hidden">
-                    <span>Discount (10% OFF):</span>
-                    <span id="drawer-discount">-₹0</span>
-                </div>
-                <div class="flex justify-between items-center text-sm font-black text-pickle-900 pt-1 border-t border-gray-100">
-                    <span>Estimated Total:</span>
-                    <span id="drawer-grand-total" class="text-lg text-pickle-800">₹0</span>
-                </div>
-            </div>
-
-            <button onclick="sendCombinedWhatsAppOrder()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold text-xs shadow-md flex items-center justify-center gap-2 transition">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>Send Order on WhatsApp</span>
-            </button>
-            <p class="text-[10px] text-gray-500 text-center">Fast delivery across Kerala & India. We confirm via WhatsApp instantly.</p>
-        </div>
-    </div>
-
-    <!-- JavaScript for Viewport Switching, Dynamic Catalog & Shopping Bag -->
-    <script>
-        // Toggle view function between Mobile Mockup and Full Desktop
-        function setViewport(mode) {
-            const wrapper = document.getElementById('viewport-wrapper');
-            const phoneFrame = document.getElementById('phone-frame');
-            const innerScreen = document.getElementById('inner-screen');
-            const phoneNotch = document.getElementById('phone-notch');
-            const phoneHomebar = document.getElementById('phone-homebar');
-            const btnMobile = document.getElementById('toggle-mobile');
-            const btnDesktop = document.getElementById('toggle-desktop');
-
-            if (mode === 'mobile') {
-                wrapper.className = "w-full py-6 flex justify-center items-center bg-gray-900/10 min-h-screen viewport-transition";
-                phoneFrame.className = "w-full max-w-[430px] bg-black rounded-[48px] p-3.5 shadow-2xl border-4 border-gray-800 relative viewport-transition";
-                innerScreen.className = "w-full h-[860px] bg-[#faf8f5] rounded-[38px] overflow-y-auto overflow-x-hidden relative shadow-inner";
-                phoneNotch.classList.remove('hidden');
-                phoneHomebar.classList.remove('hidden');
-                
-                btnMobile.className = "px-3.5 py-1.5 text-xs font-bold rounded-lg bg-amberGold-500 text-white shadow transition flex items-center gap-1.5";
-                btnDesktop.className = "px-3.5 py-1.5 text-xs font-bold rounded-lg text-gray-300 hover:text-white transition flex items-center gap-1.5";
-            } else {
-                wrapper.className = "w-full p-0 bg-white min-h-screen viewport-transition";
-                phoneFrame.className = "w-full max-w-full bg-white rounded-none p-0 shadow-none border-none relative viewport-transition";
-                innerScreen.className = "w-full h-auto bg-[#faf8f5] rounded-none overflow-visible relative shadow-none";
-                phoneNotch.classList.add('hidden');
-                phoneHomebar.classList.add('hidden');
-
-                btnMobile.className = "px-3.5 py-1.5 text-xs font-bold rounded-lg text-gray-300 hover:text-white transition flex items-center gap-1.5";
-                btnDesktop.className = "px-3.5 py-1.5 text-xs font-bold rounded-lg bg-amberGold-500 text-white shadow transition flex items-center gap-1.5";
-            }
-        }
-
-        // Smooth scroll to catalog for both phone screen container and window
-        function scrollToCatalog(event) {
-            if (event) event.preventDefault();
-            const catalog = document.getElementById('catalog');
-            const innerScreen = document.getElementById('inner-screen');
-            if (catalog) {
-                catalog.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        // Expanded Product Catalog (12 authentic varieties)
-        const products = [
-            {
-                id: 1,
-                name: "Nadan Mango Pickle",
-                category: "veg",
-                description: "Raw country mango chunks in traditional chili, roasted fenugreek & sesame oil.",
-                spice: "🌶️🌶️🌶️ Medium",
-                icon: "🥭",
-                prices: { "250g": 140, "500g": 260, "1kg": 500 }
-            },
-            {
-                id: 2,
-                name: "Tender Mango (Kannan Manga)",
-                category: "special",
-                description: "Whole baby green mangoes cured in brine and fiery crushed bird's eye chili paste.",
-                spice: "🌶️🌶️🌶️🌶️ Spicy",
-                icon: "🥭",
-                prices: { "250g": 160, "500g": 300, "1kg": 580 }
-            },
-            {
-                id: 3,
-                name: "Garlic Pickle (Poondu)",
-                category: "veg",
-                description: "Whole peeled garlic cloves slow-cooked in rich red spices and gingelly oil.",
-                spice: "🌶️🌶️ Medium",
-                icon: "🧄",
-                prices: { "250g": 170, "500g": 320, "1kg": 620 }
-            },
-            {
-                id: 4,
-                name: "Beef Roast Pickle",
-                category: "non-veg",
-                description: "Tender local beef chunks roasted dry in Malabar spices, ginger-garlic and pure coconut oil.",
-                spice: "🌶️🌶️🌶️🌶️ Hot",
-                icon: "🥩",
-                prices: { "250g": 250, "500g": 480, "1kg": 940 }
-            },
-            {
-                id: 5,
-                name: "Prawns (Chemmeen) Pickle",
-                category: "non-veg",
-                description: "Fresh coastal prawns crisp-fried and steeped in tangy vinegar-free Malabar pickle masala.",
-                spice: "🌶️🌶️🌶️🌶️ Spicy",
-                icon: "🦐",
-                prices: { "250g": 280, "500g": 540, "1kg": 1050 }
-            },
-            {
-                id: 6,
-                name: "Lemon Pickle (Naranga)",
-                category: "veg",
-                description: "Sun-ripened yellow lemons salt-cured naturally and tempered with mustard seeds & curry leaves.",
-                spice: "🌶️🌶️ Medium",
-                icon: "🍋",
-                prices: { "250g": 130, "500g": 240, "1kg": 460 }
-            },
-            {
-                id: 7,
-                name: "Malabar Fish Pickle (Meen)",
-                category: "non-veg",
-                description: "Deep fried king fish / mackerel steaks seasoned in Kashmiri chili and aromatic curry leaf oil.",
-                spice: "🌶️🌶️🌶️🌶️ Spicy",
-                icon: "🐟",
-                prices: { "250g": 260, "500g": 500, "1kg": 980 }
-            },
-            {
-                id: 8,
-                name: "Pepper Chicken Pickle",
-                category: "non-veg",
-                description: "Boneless chicken roasted in black Wayanad pepper, green chilies, and cold-pressed coconut oil.",
-                spice: "🌶️🌶️🌶️ Hot",
-                icon: "🍗",
-                prices: { "250g": 240, "500g": 460, "1kg": 900 }
-            },
-            {
-                id: 9,
-                name: "Kadumanga (Instant Cut Mango)",
-                category: "veg",
-                description: "Crunchy baby mango cubes instantly pickled in fiery red chili powder and hot gingelly oil.",
-                spice: "🌶️🌶️🌶️ Medium",
-                icon: "🥭",
-                prices: { "250g": 130, "500g": 250, "1kg": 480 }
-            },
-            {
-                id: 10,
-                name: "Dates & Lime (Sweet & Sour)",
-                category: "special",
-                description: "Soft Black Oman dates infused with sun-cured lime and jaggery syrup. Sweet, spicy, heavenly.",
-                spice: "🌶️ Mild",
-                icon: "🍯",
-                prices: { "250g": 180, "500g": 340, "1kg": 660 }
-            },
-            {
-                id: 11,
-                name: "Bittergourd (Pavakka) Crisp",
-                category: "veg",
-                description: "Thinly sliced bittergourd fried crisp, coated with sweet jaggery-tamarind chili reduction.",
-                spice: "🌶️🌶️ Medium",
-                icon: "🥒",
-                prices: { "250g": 150, "500g": 280, "1kg": 540 }
-            },
-            {
-                id: 12,
-                name: "Kanthari (Bird's Eye Chili)",
-                category: "special",
-                description: "Whole spicy green Kanthari chilies steeped in pure lime juice and rock salt brine.",
-                spice: "🌶️🌶️🌶️🌶️ Fiery",
-                icon: "🌶️",
-                prices: { "250g": 190, "500g": 360, "1kg": 700 }
-            }
-        ];
-
-        // Active state of selection on cards
-        const productStates = {};
-        products.forEach(p => {
-            productStates[p.id] = { weight: "250g", qty: 1 };
-        });
-
-        // Shopping Bag state for multi-item checkout
-        let shoppingBag = [];
-        let appliedDiscount = 0; // 0 or 0.10 (10%)
-
-        function applyBagCoupon() {
-            const input = document.getElementById('bag-coupon-input');
-            const msg = document.getElementById('bag-coupon-msg');
-            const code = input.value.trim().toUpperCase();
-
-            if (code === 'PICKLE10') {
-                appliedDiscount = 0.10;
-                msg.textContent = '🎉 10% discount applied successfully!';
-                msg.className = 'text-[10px] text-emerald-700 font-bold block';
-            } else if (code === '') {
-                appliedDiscount = 0;
-                msg.textContent = '';
-                msg.className = 'text-[10px] hidden';
-            } else {
-                appliedDiscount = 0;
-                msg.textContent = '❌ Invalid coupon. Try PICKLE10';
-                msg.className = 'text-[10px] text-red-600 font-bold block';
-            }
-            updateBagUI();
-        }
-
-        let currentCategory = 'all';
-        let currentSearchQuery = '';
-
-        function renderProducts() {
-            const grid = document.getElementById('product-grid');
-            const noMsg = document.getElementById('no-products-msg');
-            grid.innerHTML = '';
-
-            let filtered = products;
-
-            // Apply category filter
-            if (currentCategory !== 'all') {
-                filtered = filtered.filter(p => p.category === currentCategory);
-            }
-
-            // Apply search query
-            if (currentSearchQuery.trim() !== '') {
-                const q = currentSearchQuery.toLowerCase().trim();
-                filtered = filtered.filter(p => 
-                    p.name.toLowerCase().includes(q) || 
-                    p.description.toLowerCase().includes(q) ||
-                    p.category.toLowerCase().includes(q)
-                );
-            }
-
-            if (filtered.length === 0) {
-                noMsg.classList.remove('hidden');
-                grid.classList.add('hidden');
-                return;
-            } else {
-                noMsg.classList.add('hidden');
-                grid.classList.remove('hidden');
-            }
-
-            filtered.forEach(product => {
-                const state = productStates[product.id];
-                const currentPrice = product.prices[state.weight];
-
-                const card = document.createElement('div');
-                card.className = "product-card bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition";
-                
-                card.innerHTML = `
-                    <div>
-                        <div class="relative h-36 rounded-xl overflow-hidden mb-3 bg-[#2b583f] flex items-center justify-center shadow-inner text-white">
-                            <div class="text-center p-3 select-none">
-                                <span class="text-4xl block mb-1 drop-shadow-md">${product.icon}</span>
-                                <span class="text-[11px] font-extrabold text-amber-200 tracking-wider uppercase block">${product.name}</span>
-                            </div>
-                            <span class="absolute top-2 right-2 bg-black/40 backdrop-blur-xs text-amber-200 text-[10px] font-extrabold px-2 py-0.5 rounded-md shadow-xs border border-white/10">
-                                ${product.spice}
-                            </span>
-                            <span class="absolute top-2 left-2 bg-black/40 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-md shadow-xs border border-white/10 uppercase">
-                                ${product.category}
-                            </span>
-                        </div>
-                        <h3 class="text-sm font-extrabold text-gray-900 leading-tight">${product.name}</h3>
-                        <p class="text-[11px] text-gray-500 mt-1 line-clamp-2 leading-relaxed">${product.description}</p>
-                    </div>
-
-                    <div class="space-y-3 pt-3 border-t border-gray-100 mt-3">
-                        <div>
-                            <div class="flex justify-between items-center mb-1">
-                                <label class="text-[10px] font-bold text-gray-400 uppercase">Jar Size:</label>
-                                <span class="text-[10px] text-amberGold-600 font-semibold">In Glass Jar</span>
-                            </div>
-                            <div class="grid grid-cols-3 gap-1.5">
-                                <button onclick="updateWeight(${product.id}, '250g')" class="py-1 text-[11px] font-bold rounded-lg border transition ${state.weight === '250g' ? 'bg-pickle-700 text-white border-pickle-700 shadow-xs' : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'}">250g</button>
-                                <button onclick="updateWeight(${product.id}, '500g')" class="py-1 text-[11px] font-bold rounded-lg border transition ${state.weight === '500g' ? 'bg-pickle-700 text-white border-pickle-700 shadow-xs' : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'}">500g</button>
-                                <button onclick="updateWeight(${product.id}, '1kg')" class="py-1 text-[11px] font-bold rounded-lg border transition ${state.weight === '1kg' ? 'bg-pickle-700 text-white border-pickle-700 shadow-xs' : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'}">1 Kg</button>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-[9px] text-gray-400 block font-semibold uppercase">Price (${state.weight})</span>
-                                <span class="text-base font-black text-pickle-900">₹${currentPrice * state.qty}</span>
-                            </div>
-                            <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-                                <button onclick="updateQty(${product.id}, -1)" class="px-2.5 py-1 text-gray-600 font-bold hover:bg-gray-200 transition">-</button>
-                                <span class="px-3 py-1 text-xs font-bold text-gray-800">${state.qty}</span>
-                                <button onclick="updateQty(${product.id}, 1)" class="px-2.5 py-1 text-gray-600 font-bold hover:bg-gray-200 transition">+</button>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-2">
-                            <button onclick="addToBag(${product.id})" class="bg-pickle-100 hover:bg-pickle-200 text-pickle-900 py-2.5 rounded-xl font-bold text-xs transition flex items-center justify-center gap-1.5 border border-pickle-200">
-                                <i class="fa-solid fa-plus text-[10px]"></i>
-                                <span>Add to Bag</span>
-                            </button>
-                            <button onclick="orderSingleOnWhatsApp(${product.id})" class="bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-xl font-bold text-xs shadow transition flex items-center justify-center gap-1.5">
-                                <i class="fa-brands fa-whatsapp text-sm"></i>
-                                <span>Order Now</span>
-                            </button>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function updateWeight(productId, weight) {
-            productStates[productId].weight = weight;
-            renderProducts();
-        }
-
-        function updateQty(productId, delta) {
-            let newQty = productStates[productId].qty + delta;
-            if (newQty < 1) newQty = 1;
-            if (newQty > 20) newQty = 20;
-            productStates[productId].qty = newQty;
-            renderProducts();
-        }
-
-        function filterCategory(category) {
-            currentCategory = category;
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.className = "category-btn px-3 py-1.5 rounded-lg font-bold text-xs bg-white text-gray-700 border border-gray-200 whitespace-nowrap";
-            });
-            const activeBtnId = category === 'all' ? 'btn-all' : `btn-${category}`;
-            document.getElementById(activeBtnId).className = "category-btn px-3 py-1.5 rounded-lg font-bold text-xs bg-pickle-700 text-white whitespace-nowrap shadow-sm";
-            renderProducts();
-        }
-
-        function handleSearch(val) {
-            currentSearchQuery = val;
-            renderProducts();
-        }
-
-        function clearSearch() {
-            document.getElementById('catalog-search').value = '';
-            currentSearchQuery = '';
-            renderProducts();
-        }
-
-        // Add item to bag
-        function addToBag(productId) {
-            const product = products.find(p => p.id === productId);
-            const state = productStates[productId];
-            const price = product.prices[state.weight];
-
-            const existingIndex = shoppingBag.findIndex(item => item.id === productId && item.weight === state.weight);
-            if (existingIndex > -1) {
-                shoppingBag[existingIndex].qty += state.qty;
-            } else {
-                shoppingBag.push({
-                    id: product.id,
-                    name: product.name,
-                    weight: state.weight,
-                    price: price,
-                    qty: state.qty,
-                    icon: product.icon
-                });
-            }
-
-            updateBagUI();
-            
-            // Subtle flash notification
-            const floatingBar = document.getElementById('floating-cart-bar');
-            floatingBar.classList.remove('hidden');
-        }
-
-        function updateBagUI() {
-            try {
-                localStorage.setItem('picklearo_bag', JSON.stringify(shoppingBag));
-            } catch (e) {}
-
-            const totalCount = shoppingBag.reduce((sum, item) => sum + item.qty, 0);
-            const subtotal = shoppingBag.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            const discountAmt = Math.round(subtotal * appliedDiscount);
-            const grandTotal = subtotal - discountAmt;
-
-            // Update badge counters
-            document.getElementById('nav-cart-count').textContent = totalCount;
-            document.getElementById('drawer-item-count').textContent = totalCount;
-            if (document.getElementById('drawer-qty-sum')) {
-                document.getElementById('drawer-qty-sum').textContent = totalCount;
-            }
-            if (document.getElementById('drawer-subtotal')) {
-                document.getElementById('drawer-subtotal').textContent = `₹${subtotal}`;
-            }
-            if (document.getElementById('drawer-discount-row')) {
-                if (discountAmt > 0) {
-                    document.getElementById('drawer-discount-row').classList.remove('hidden');
-                    document.getElementById('drawer-discount').textContent = `-₹${discountAmt}`;
-                } else {
-                    document.getElementById('drawer-discount-row').classList.add('hidden');
-                }
-            }
-            document.getElementById('drawer-grand-total').textContent = `₹${grandTotal}`;
-
-            const floatingBar = document.getElementById('floating-cart-bar');
-            if (totalCount > 0) {
-                floatingBar.classList.remove('hidden');
-                document.getElementById('floating-cart-count').textContent = totalCount;
-                document.getElementById('floating-cart-total').textContent = `₹${grandTotal}`;
-            } else {
-                floatingBar.classList.add('hidden');
-            }
-
-            // Render drawer items
-            const listContainer = document.getElementById('drawer-items-list');
-            if (shoppingBag.length === 0) {
-                listContainer.innerHTML = `
-                    <div class="text-center py-12 text-gray-400">
-                        <i class="fa-solid fa-basket-shopping text-3xl mb-2 text-gray-300"></i>
-                        <p class="text-xs font-semibold text-gray-600">Your bag is empty.</p>
-                        <p class="text-[10px] mt-0.5">Click "Add to Bag" on any pickle above!</p>
-                    </div>
-                `;
-            } else {
-                listContainer.innerHTML = '';
-                shoppingBag.forEach((item, index) => {
-                    const row = document.createElement('div');
-                    row.className = "flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100 text-xs";
-                    row.innerHTML = `
-                        <div class="flex items-center gap-2.5">
-                            <span class="text-lg">${item.icon}</span>
-                            <div>
-                                <h4 class="font-bold text-gray-900 leading-tight">${item.name}</h4>
-                                <span class="text-[10px] text-gray-500">${item.weight} • ₹${item.price} each</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-3">
-                            <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden bg-white">
-                                <button onclick="modifyBagQty(${index}, -1)" class="px-2 py-0.5 text-gray-600 font-bold hover:bg-gray-100">-</button>
-                                <span class="px-2 py-0.5 text-xs font-bold">${item.qty}</span>
-                                <button onclick="modifyBagQty(${index}, 1)" class="px-2 py-0.5 text-gray-600 font-bold hover:bg-gray-100">+</button>
-                            </div>
-                            <span class="font-black text-pickle-900 min-w-[50px] text-right">₹${item.price * item.qty}</span>
-                            <button onclick="removeFromBag(${index})" class="text-red-400 hover:text-red-600 ml-1">
-                                <i class="fa-solid fa-trash-can text-xs"></i>
-                            </button>
-                        </div>
-                    `;
-                    listContainer.appendChild(row);
-                });
-            }
-        }
-
-        function modifyBagQty(index, delta) {
-            shoppingBag[index].qty += delta;
-            if (shoppingBag[index].qty <= 0) {
-                shoppingBag.splice(index, 1);
-            }
-            updateBagUI();
-        }
-
-        function removeFromBag(index) {
-            shoppingBag.splice(index, 1);
-            updateBagUI();
-        }
-
-        function toggleCartDrawer() {
-            const drawer = document.getElementById('cart-drawer');
-            const backdrop = document.getElementById('cart-drawer-backdrop');
-
-            if (drawer.classList.contains('translate-x-full')) {
-                drawer.classList.remove('translate-x-full');
-                backdrop.classList.remove('hidden');
-            } else {
-                drawer.classList.add('translate-x-full');
-                backdrop.classList.add('hidden');
-            }
-        }
-
-        // WhatsApp ordering - Single item
-        function orderSingleOnWhatsApp(productId) {
-            const product = products.find(p => p.id === productId);
-            const state = productStates[productId];
-            const totalPrice = product.prices[state.weight] * state.qty;
-
-            const message = `Hello Picklearo! 🥒\n\nI would like to order fresh homemade pickles from Muttipalam, Manjeri:\n\n• *${product.name}*\n• Jar Size: ${state.weight}\n• Quantity: ${state.qty}\n• Total Amount: ₹${totalPrice}\n\nPlease confirm availability and delivery to my address.`;
-            
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/919074613342?text=${encodedMessage}`, '_blank');
-        }
-
-        // WhatsApp ordering - Combined Bag
-        function sendCombinedWhatsAppOrder() {
-            if (shoppingBag.length === 0) {
-                alert("Please add at least one pickle to your bag first!");
-                return;
-            }
-
-            const subtotal = shoppingBag.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            const discountAmt = Math.round(subtotal * appliedDiscount);
-            const grandTotal = subtotal - discountAmt;
-            const totalCount = shoppingBag.reduce((sum, item) => sum + item.qty, 0);
-
-            let itemsList = '';
-            shoppingBag.forEach((item, i) => {
-                itemsList += `${i + 1}. *${item.name}* (${item.weight}) x ${item.qty} = ₹${item.price * item.qty}\n`;
-            });
-
-            const custName = document.getElementById('cust-name') ? document.getElementById('cust-name').value.trim() : '';
-            const custAddress = document.getElementById('cust-address') ? document.getElementById('cust-address').value.trim() : '';
-            const custPincode = document.getElementById('cust-pincode') ? document.getElementById('cust-pincode').value.trim() : '';
-
-            let detailsText = '';
-            if (custName || custAddress || custPincode) {
-                detailsText = `\n*Delivery Details:*\n` +
-                    (custName ? `• *Name:* ${custName}\n` : '') +
-                    (custAddress ? `• *Address:* ${custAddress}\n` : '') +
-                    (custPincode ? `• *Pincode:* ${custPincode}\n` : '');
-            }
-
-            let discountText = discountAmt > 0 ? `\n*Promo Discount (PICKLE10):* -₹${discountAmt}` : '';
-
-            const message = `Hello Picklearo! 🥒\n\nI would like to place an order from Muttipalam, Manjeri:\n\n${itemsList}\n*Total Items:* ${totalCount}\n*Subtotal:* ₹${subtotal}${discountText}\n*Payable Amount:* ₹${grandTotal}\n${detailsText}\nPlease confirm order availability and send payment QR / details!`;
-
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/919074613342?text=${encodedMessage}`, '_blank');
-        }
-
-        // Initialize category counters & render
-        window.onload = function() {
-            try {
-                const savedBag = localStorage.getItem('picklearo_bag');
-                if (savedBag) {
-                    shoppingBag = JSON.parse(savedBag);
-                }
-            } catch (e) {}
-
-            document.getElementById('total-count-badge').textContent = products.length;
-            document.getElementById('cat-count-all').textContent = products.length;
-            document.getElementById('cat-count-veg').textContent = products.filter(p => p.category === 'veg').length;
-            document.getElementById('cat-count-non-veg').textContent = products.filter(p => p.category === 'non-veg').length;
-            document.getElementById('cat-count-special').textContent = products.filter(p => p.category === 'special').length;
-
-            renderProducts();
-            updateBagUI();
-        }
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
