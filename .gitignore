@@ -1,6 +1,7 @@
-# Dependencies & build cache
+# Dependencies, build cache & generated static deployment folder
 node_modules/
 .vite/
+dist/
 
 # Large source hero archive & uncompressed raw PNG frames (optimized Web-ready JPGs are tracked in hero/optimized/)
 hero/*.zip
